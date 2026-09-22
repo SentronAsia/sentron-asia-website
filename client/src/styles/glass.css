@@ -1,0 +1,132 @@
+/* ============================================================
+   GLASSMORPHISM UTILITY CLASSES
+   Selective use on primary surfaces only.
+   ============================================================ */
+
+/* ---- Pearl Canvas: Subtle frosted background for main content areas ---- */
+.pearl-canvas {
+  background: oklch(0.98 0.003 240 / 0.7);
+  backdrop-filter: blur(20px) saturate(1.3);
+  -webkit-backdrop-filter: blur(20px) saturate(1.3);
+}
+
+[data-theme="dark"] .pearl-canvas {
+  background: oklch(0.20 0.028 225 / 0.65);
+  backdrop-filter: blur(20px) saturate(1.4);
+  -webkit-backdrop-filter: blur(20px) saturate(1.4);
+}
+
+/* ---- Glass Card Light: Card surfaces with frosted effect ---- */
+.glass-card-light {
+  background: oklch(1 0 0 / 0.55);
+  backdrop-filter: blur(16px) saturate(1.2);
+  -webkit-backdrop-filter: blur(16px) saturate(1.2);
+  border: 1px solid oklch(0.90 0.008 230 / 0.6);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+}
+
+[data-theme="dark"] .glass-card-light {
+  background: oklch(0.24 0.03 225 / 0.5);
+  border-color: oklch(0.35 0.025 225 / 0.4);
+  box-shadow: var(--shadow-md);
+}
+
+/* ---- Glass Card Light Hover: Interactive hover variant ---- */
+.glass-card-light-hover {
+  background: oklch(1 0 0 / 0.55);
+  backdrop-filter: blur(16px) saturate(1.2);
+  -webkit-backdrop-filter: blur(16px) saturate(1.2);
+  border: 1px solid oklch(0.90 0.008 230 / 0.6);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform 250ms ease,
+    box-shadow 250ms ease,
+    border-color 250ms ease;
+}
+
+.glass-card-light-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+  border-color: oklch(0.66 0.117 203 / 0.35);
+}
+
+[data-theme="dark"] .glass-card-light-hover {
+  background: oklch(0.24 0.03 225 / 0.5);
+  border-color: oklch(0.35 0.025 225 / 0.4);
+  box-shadow: var(--shadow-md);
+}
+
+[data-theme="dark"] .glass-card-light-hover:hover {
+  box-shadow: var(--shadow-xl);
+  border-color: oklch(0.68 0.14 160 / 0.4);
+}
+
+/* ---- Glass Panel Light: Full panel surfaces (header, sidebar, modals) ---- */
+.glass-panel-light {
+  background: oklch(0.98 0.003 240 / 0.82);
+  backdrop-filter: blur(24px) saturate(1.4);
+  -webkit-backdrop-filter: blur(24px) saturate(1.4);
+  border-bottom: 1px solid oklch(0.90 0.008 230 / 0.5);
+}
+
+[data-theme="dark"] .glass-panel-light {
+  background: oklch(0.18 0.027 225 / 0.85);
+  border-bottom-color: oklch(0.30 0.025 225 / 0.5);
+}
+
+/* ---- Glass Image Frame: Product images ---- */
+.glass-image-frame {
+  background: oklch(0.97 0.003 240 / 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid oklch(0.90 0.008 230 / 0.5);
+  border-radius: var(--radius-xl);
+  padding: 1.5rem;
+}
+
+[data-theme="dark"] .glass-image-frame {
+  background: oklch(0.22 0.03 225 / 0.5);
+  border-color: oklch(0.32 0.025 225 / 0.4);
+}
+
+/* ---- Glass Input: Form controls inside glass surfaces ---- */
+.glass-input {
+  background: oklch(1 0 0 / 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid oklch(0.88 0.01 230 / 0.6);
+  border-radius: var(--radius-md);
+  padding: 0.625rem 0.875rem;
+  font-size: 0.9375rem;
+  color: var(--color-text);
+  transition: border-color 200ms ease, box-shadow 200ms ease;
+}
+
+.glass-input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px oklch(0.66 0.117 203 / 0.12);
+}
+
+.glass-input::placeholder {
+  color: var(--color-text-muted);
+}
+
+[data-theme="dark"] .glass-input {
+  background: oklch(0.22 0.03 225 / 0.5);
+  border-color: oklch(0.35 0.025 225 / 0.5);
+}
+
+[data-theme="dark"] .glass-input:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px oklch(0.68 0.14 160 / 0.15);
+}
+
+/* ---- Reduced Motion: Disable hover transforms ---- */
+@media (prefers-reduced-motion: reduce) {
+  .glass-card-light-hover:hover {
+    transform: none;
+  }
+}
