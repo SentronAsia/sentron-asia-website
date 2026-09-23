@@ -19,7 +19,7 @@ const CEO_TITLE = 'Founder';
 
 export default function HomePage() {
   const { data: featuredProducts } = useQuery({
-    queryKey: ['products', 'featured'],
+    queryKey: ['products', 'isFeatured'],
     queryFn: fetchFeaturedProducts,
   });
 

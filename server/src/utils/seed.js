@@ -22,7 +22,7 @@ async function seed() {
   const existing = await User.findOne({ email: adminEmail });
   if (existing) {
     existing.password = defaultPassword;
-    existing.isAdmin = true;
+    existing.role = 'admin';
     existing.mustChangePassword = false;
     await existing.save();
     console.log(`✓ Admin user updated: ${adminEmail}`);
@@ -30,7 +30,7 @@ async function seed() {
     await User.create({
       email: adminEmail,
       password: defaultPassword,
-      isAdmin: true,
+      role: 'admin',
       mustChangePassword: false,
     });
     console.log(`✓ Admin user created: ${adminEmail}`);

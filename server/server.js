@@ -21,6 +21,7 @@ import contactRoutes from './src/routes/contactRoutes.js';
 import dashboardRoutes from './src/routes/dashboardRoutes.js';
 import uploadRoutes from './src/routes/uploadRoutes.js';
 import settingsRoutes from './src/routes/settingsRoutes.js';
+import databaseRoutes from './src/routes/databaseRoutes.js';
 
 const app = express();
 
@@ -63,6 +64,7 @@ app.use('/api/admin/page-seo', seoRoutes);
 app.use('/api/admin/dashboard', dashboardRoutes);
 app.use('/api/admin/upload', uploadRoutes);
 app.use('/api/admin/settings', settingsRoutes);
+app.use('/api/admin/database', databaseRoutes);
 
 // ---- Error Handling ----
 app.use(notFound);

@@ -15,7 +15,7 @@ const columns = [
   { key: 'slug', label: 'Slug' },
   { key: 'category', label: 'Category', render: (item) => item.category?.name || '–' },
   { key: 'brand', label: 'Brand', render: (item) => item.brand?.name || '–' },
-  { key: 'featured', label: 'Featured', render: (item) => item.featured ? '✓' : '–' },
+  { key: 'isFeatured', label: 'Featured', render: (item) => item.isFeatured ? '✓' : '–' },
 ];
 
 const formFields = [
@@ -25,7 +25,7 @@ const formFields = [
   { key: 'description', label: 'Description', type: 'textarea', required: true },
   { key: 'categoryId', label: 'Category ID', required: true, placeholder: 'MongoDB ObjectId' },
   { key: 'brandId', label: 'Brand ID', placeholder: 'MongoDB ObjectId' },
-  { key: 'featured', label: 'Featured', type: 'select', options: [
+  { key: 'isFeatured', label: 'Featured', type: 'select', options: [
     { value: 'false', label: 'No' },
     { value: 'true', label: 'Yes' },
   ]},
@@ -42,7 +42,7 @@ export default function ProductsManager() {
       deleteFn={adminDeleteProduct}
       columns={columns}
       formFields={formFields}
-      defaultForm={{ name: '', slug: '', images: [], description: '', categoryId: '', brandId: '', featured: 'false' }}
+      defaultForm={{ name: '', slug: '', images: [], description: '', categoryId: '', brandId: '', isFeatured: 'false' }}
     />
   );
 }

@@ -120,4 +120,4 @@ export const fetchDashboardStats = () => api.get('/admin/dashboard/stats').then(
 // Admin — Settings
 export const adminFetchSettings = () => api.get('/admin/settings').then(r => r.data);
 export const adminUpdateSettings = (data) => api.put('/admin/settings', data).then(r => r.data);
-export const exportDatabase = () => api.get('/admin/settings/export', { responseType: 'blob' });
+export const exportDatabase = () => api.get('/admin/database/export', { responseType: 'blob' });

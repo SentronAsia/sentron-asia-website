@@ -41,7 +41,7 @@ router.get('/', async (req, res, next) => {
 // GET /api/products/featured — Public: featured products
 router.get('/featured', async (req, res, next) => {
   try {
-    const products = await Product.find({ featured: true })
+    const products = await Product.find({ isFeatured: true })
       .populate('categoryId', 'name slug')
       .sort({ createdAt: -1 })
       .limit(12);

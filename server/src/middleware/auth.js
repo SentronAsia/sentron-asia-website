@@ -31,7 +31,7 @@ export const authenticate = async (req, res, next) => {
  * Must be used AFTER authenticate middleware.
  */
 export const requireAdmin = (req, res, next) => {
-  if (!req.user || !req.user.isAdmin) {
+  if (!req.user || req.user.role !== 'admin') {
     return res.status(403).json({ success: false, message: 'Admin access required.' });
   }
   next();

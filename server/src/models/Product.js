@@ -7,8 +7,11 @@ const productSchema = new mongoose.Schema({
   images: [{ type: String }],
   categoryId: { type: mongoose.Schema.Types.ObjectId, ref: 'Category' },
   brandId: { type: mongoose.Schema.Types.ObjectId, ref: 'Brand' },
-  specifications: { type: mongoose.Schema.Types.Mixed, default: {} },
-  featured: { type: Boolean, default: false },
+  specifications: {
+    columns: [{ type: String }],
+    rows: [{ type: mongoose.Schema.Types.Mixed }],
+  },
+  isFeatured: { type: Boolean, default: false },
 }, { timestamps: true });
 
 productSchema.pre('save', function (next) {

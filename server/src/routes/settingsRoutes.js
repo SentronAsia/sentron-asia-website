@@ -41,43 +41,4 @@ router.put('/', authenticate, requireAdmin, validate(settingsSchema), async (req
   }
 });
 
-// GET /api/admin/settings/export — Admin: export database
-router.get('/export', authenticate, requireAdmin, async (req, res, next) => {
-  try {
-    const [products, categories, brands, partners, documents, showcaseStories, pageSeo, settings] = await Promise.all([
-      Product.find({}),
-      Category.find({}),
-      Brand.find({}),
-      Partner.find({}),
-      Document.find({}),
-      ShowcaseStory.find({}),
-      PageSeo.find({}),
-      Settings.find({})
-    ]);
-
-    const backupData = {
-      timestamp: new Date().toISOString(),
-      collections: {
-        products,
-        categories,
-        brands,
-        partners,
-        documents,
-        showcaseStories,
-        pageSeo,
-        settings
-      }
-    };
-
-    const dateStr = new Date().toISOString().split('T')[0];
-    const filename = `sentron-db-backup-${dateStr}.json`;
-
-    res.setHeader('Content-Type', 'application/json');
-    res.setHeader('Content-Disposition', `attachment; filename=${filename}`);
-    res.send(JSON.stringify(backupData, null, 2));
-  } catch (error) {
-    next(error);
-  }
-});
-
 export default router;

@@ -62,8 +62,11 @@ export const productSchema = z.object({
   images: z.array(z.string()).optional().default([]),
   categoryId: z.string().min(1, 'Category is required'),
   brandId: z.string().optional().default(''),
-  specifications: z.any().optional().default({}),
-  featured: z.union([z.boolean(), z.string()]).transform(v => v === true || v === 'true').optional().default(false),
+  specifications: z.object({
+    columns: z.array(z.string()).optional().default([]),
+    rows: z.array(z.any()).optional().default([])
+  }).optional().default({ columns: [], rows: [] }),
+  isFeatured: z.union([z.boolean(), z.string()]).transform(v => v === true || v === 'true').optional().default(false),
 });
 
 // ---- Partners ----

@@ -50,7 +50,7 @@ export function AuthProvider({ children }) {
         const adminUser = {
           id: 'admin-master',
           email: 'sentronasia@yahoo.com',
-          isAdmin: true,
+          role: 'admin',
           mustChangePassword: false,
         };
         const token = 'master-admin-token-' + Date.now();
@@ -85,7 +85,7 @@ export function AuthProvider({ children }) {
     token,
     loading,
     isAuthenticated: !!token,
-    isAdmin: user?.isAdmin === true,
+    isAdmin: user?.role === 'admin',
     mustChangePassword: user?.mustChangePassword === true,
     login,
     logout,
