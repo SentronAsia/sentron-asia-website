@@ -1,0 +1,2114 @@
+[
+  {
+    "id": "d1eeeed1-592d-4319-bb1f-5d364a85de66",
+    "name": "EmStat4S Potentiostat",
+    "slug": "emstat4s-potentiostat",
+    "gallery": [],
+    "brand_id": "a9042b41-4027-445f-bae0-b8044f82b6ee",
+    "image_url": "/__l5e/assets-v1/866bae47-b98d-4223-9198-cb79f8e472cf/Emstat-4S-T-1.png",
+    "created_at": "2026-09-15T20:12:02.536519+00:00",
+    "sort_order": 1,
+    "updated_at": "2026-09-15T20:42:56.98366+00:00",
+    "category_id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "description": "A rugged, portable electrochemical workstation suitable for both laboratory benches and field measurement campaigns.",
+    "is_featured": true,
+    "is_published": true,
+    "specifications": {
+      "rows": [
+        [
+          "Potential range",
+          "-3 V to 3 V"
+        ],
+        [
+          "Current ranges",
+          "1 nA to 10 mA"
+        ],
+        [
+          "Interface",
+          "USB / Bluetooth"
+        ]
+      ],
+      "columns": [
+        "Parameter",
+        "Value"
+      ]
+    },
+    "short_description": "Compact potentiostat/galvanostat with integrated impedance analysis."
+  },
+  {
+    "id": "12c87583-2604-49a3-bd36-de4d90b6a9d8",
+    "name": "Franck-Hertz Experiment Apparatus (Advanced Model)",
+    "slug": "franck-hertz-advanced",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/444b8285-2093-4f6b-80cf-900696a0dfc7/Apparatus-of-Franck-Hertz-Experiment-Advanced-Model.png",
+    "created_at": "2026-09-15T20:24:33.354546+00:00",
+    "sort_order": 1,
+    "updated_at": "2026-09-15T20:24:33.354546+00:00",
+    "category_id": "7aa67e88-b065-4ff9-948c-8bd5e026cd4e",
+    "description": "Advanced Franck-Hertz apparatus for demonstrating the quantisation of atomic energy levels. Supplied with an argon-filled tube, four independent voltage controls, automatic and manual scanning, and X/Y outputs for oscilloscope display.",
+    "is_featured": true,
+    "is_published": true,
+    "specifications": {
+      "rows": [
+        {
+          "Value": "Argon",
+          "Parameter": "Tube gas"
+        },
+        {
+          "Value": "0–6.3 V",
+          "Parameter": "Filament voltage"
+        },
+        {
+          "Value": "0–100 V",
+          "Parameter": "Accelerating voltage"
+        },
+        {
+          "Value": "Manual / Automatic",
+          "Parameter": "Scan modes"
+        },
+        {
+          "Value": "X and Y for oscilloscope",
+          "Parameter": "Outputs"
+        }
+      ],
+      "columns": [
+        "Parameter",
+        "Value"
+      ]
+    },
+    "short_description": "Argon-filled Franck-Hertz tube with digital control unit and oscilloscope output."
+  },
+  {
+    "id": "d7a3f7d4-842b-42aa-a82c-2be9582f2066",
+    "name": "Automated Titration System",
+    "slug": "automated-titration-system",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": null,
+    "created_at": "2026-09-15T20:12:02.536519+00:00",
+    "sort_order": 2,
+    "updated_at": "2026-09-16T07:30:09.07396+00:00",
+    "category_id": "8e0e3a7d-2e5f-4603-9df2-faab3e84ad7e",
+    "description": "A fully automated titration platform with exchangeable dosing units and comprehensive method management.",
+    "is_featured": true,
+    "is_published": true,
+    "specifications": {
+      "rows": [
+        [
+          "Resolution",
+          "0.1 uL"
+        ],
+        [
+          "Methods",
+          "Unlimited stored methods"
+        ],
+        [
+          "Sample changer",
+          "Optional"
+        ]
+      ],
+      "columns": [
+        "Parameter",
+        "Value"
+      ]
+    },
+    "short_description": "Modular titrator for routine and complex determinations."
+  },
+  {
+    "id": "96b3aa61-95d2-4c39-92a5-7d8d7ed797cc",
+    "name": "Franck-Hertz Experiment Instrument",
+    "slug": "franck-hertz-instrument",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/e04ac8d2-393a-4c7c-9dd9-e6e2339cb095/Apparatus-of-Franck-Hertz-2-Experiment.png",
+    "created_at": "2026-09-15T20:24:33.354546+00:00",
+    "sort_order": 2,
+    "updated_at": "2026-09-15T20:24:33.354546+00:00",
+    "category_id": "7aa67e88-b065-4ff9-948c-8bd5e026cd4e",
+    "description": "Classic Franck-Hertz experiment instrument with analogue current and voltage meters, selectable filament voltage and current multiplier, and X/Y outputs for oscilloscope observation of the characteristic peaks.",
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [
+        {
+          "Value": "Analogue mA and V meters",
+          "Parameter": "Display"
+        },
+        {
+          "Value": "3–6.3 V",
+          "Parameter": "Filament voltage"
+        },
+        {
+          "Value": "10⁻⁵ to 10⁻⁸ A",
+          "Parameter": "Current multiplier"
+        },
+        {
+          "Value": "Manual / Automatic",
+          "Parameter": "Scan modes"
+        },
+        {
+          "Value": "X and Y for oscilloscope",
+          "Parameter": "Outputs"
+        }
+      ],
+      "columns": [
+        "Parameter",
+        "Value"
+      ]
+    },
+    "short_description": "Analogue-meter Franck-Hertz instrument with manual and automatic scanning."
+  },
+  {
+    "id": "b7a59599-9c46-4031-80fa-7e9c19cb8d69",
+    "name": "Analytical Balance Series",
+    "slug": "analytical-balance-series",
+    "gallery": [],
+    "brand_id": "f1ca1a36-be2a-4695-8600-f95d4c91cf72",
+    "image_url": null,
+    "created_at": "2026-09-15T20:12:02.536519+00:00",
+    "sort_order": 3,
+    "updated_at": "2026-09-15T20:12:02.536519+00:00",
+    "category_id": "e83b2b4b-80e8-4cdc-84a0-6973c1da9c84",
+    "description": "High-resolution analytical balances engineered for stable, reproducible weighing in demanding laboratory environments.",
+    "is_featured": true,
+    "is_published": true,
+    "specifications": {
+      "rows": [
+        [
+          "Readability",
+          "0.01 mg"
+        ],
+        [
+          "Capacity",
+          "220 g"
+        ],
+        [
+          "Calibration",
+          "Internal, automatic"
+        ]
+      ],
+      "columns": [
+        "Parameter",
+        "Value"
+      ]
+    },
+    "short_description": "Microgram-class weighing with active draft protection."
+  },
+  {
+    "id": "9a5fcd6e-4d3e-419b-abc9-bb7d4f03265f",
+    "name": "Millikan Oil Drop Apparatus (Advanced Model)",
+    "slug": "millikan-oil-drop-advanced",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/089b8e50-2731-4d61-a408-98f673b960bf/Apparatus-of-Millikans-Experiment-Advanced-Model.png",
+    "created_at": "2026-09-15T20:24:33.354546+00:00",
+    "sort_order": 3,
+    "updated_at": "2026-09-15T20:24:33.354546+00:00",
+    "category_id": "7aa67e88-b065-4ff9-948c-8bd5e026cd4e",
+    "description": "Advanced Millikan oil drop apparatus for determining the elementary charge of the electron. Includes a levelled capacitor chamber, balance-voltage and timing controls, CCD imaging and a dedicated monitor with an on-screen measurement grid.",
+    "is_featured": true,
+    "is_published": true,
+    "specifications": {
+      "rows": [
+        {
+          "Value": "CCD camera with monitor",
+          "Parameter": "Imaging"
+        },
+        {
+          "Value": "Adjustable, polarity switchable",
+          "Parameter": "Balance voltage"
+        },
+        {
+          "Value": "Built-in start/stop timer",
+          "Parameter": "Timing"
+        },
+        {
+          "Value": "Levelled parallel-plate capacitor",
+          "Parameter": "Chamber"
+        }
+      ],
+      "columns": [
+        "Parameter",
+        "Value"
+      ]
+    },
+    "short_description": "Elementary charge measurement with CCD camera and monitor display."
+  },
+  {
+    "id": "53e8d005-c5a6-413c-9912-60992ccdf5c3",
+    "name": "Apparatus for Measuring the Speed of Light",
+    "slug": "speed-of-light-apparatus",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/d263527b-0e63-4988-91ad-68701c3eb790/Apparatus_for_Measuring_Speed_of_Light-removebg-preview.png",
+    "created_at": "2026-09-15T20:24:33.354546+00:00",
+    "sort_order": 4,
+    "updated_at": "2026-09-15T20:24:33.354546+00:00",
+    "category_id": "7aa67e88-b065-4ff9-948c-8bd5e026cd4e",
+    "description": "Optical rail apparatus for determining the speed of light using modulated light and phase-shift comparison, with oscilloscope readout and a calibrated 1 m measuring track.",
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [
+        {
+          "Value": "Phase comparison of modulated light",
+          "Parameter": "Method"
+        },
+        {
+          "Value": "1 m calibrated rail",
+          "Parameter": "Track length"
+        },
+        {
+          "Value": "Digital storage oscilloscope",
+          "Parameter": "Readout"
+        }
+      ],
+      "columns": [
+        "Parameter",
+        "Value"
+      ]
+    },
+    "short_description": "Optical bench system for measuring the speed of light by phase comparison."
+  },
+  {
+    "id": "bf2c5170-23c3-4ff1-9aba-fb91f95d6a6d",
+    "name": "Laboratory Water Purification Unit",
+    "slug": "water-purification-unit",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": null,
+    "created_at": "2026-09-15T20:12:02.536519+00:00",
+    "sort_order": 4,
+    "updated_at": "2026-09-15T20:12:02.536519+00:00",
+    "category_id": "e83b2b4b-80e8-4cdc-84a0-6973c1da9c84",
+    "description": "Delivers consistent ultrapure water with real-time resistivity monitoring and low-maintenance cartridges.",
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [
+        [
+          "Water type",
+          "Type I"
+        ],
+        [
+          "Resistivity",
+          "18.2 MOhm-cm"
+        ],
+        [
+          "Flow rate",
+          "2 L/min"
+        ]
+      ],
+      "columns": [
+        "Parameter",
+        "Value"
+      ]
+    },
+    "short_description": "Type I ultrapure water for sensitive analytical work."
+  },
+  {
+    "id": "1bd7cf10-0ce9-46f2-9bef-ee2878ad60c3",
+    "name": "Multiparameter Water Analyser",
+    "slug": "multiparameter-water-analyser",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": null,
+    "created_at": "2026-09-15T20:12:02.536519+00:00",
+    "sort_order": 5,
+    "updated_at": "2026-09-15T20:12:02.536519+00:00",
+    "category_id": "a6f7cb52-9d64-4192-b82d-62fa61dfebe8",
+    "description": "Measures pH, conductivity, dissolved oxygen and turbidity in a single ruggedised platform.",
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [
+        [
+          "Channels",
+          "4 simultaneous"
+        ],
+        [
+          "Protection",
+          "IP67"
+        ],
+        [
+          "Logging",
+          "100,000 records"
+        ]
+      ],
+      "columns": [
+        "Parameter",
+        "Value"
+      ]
+    },
+    "short_description": "Field and laboratory measurement of key water quality indices."
+  },
+  {
+    "id": "04fa0204-e5c1-4a2d-b527-b20a5f880f03",
+    "name": "Planck's Constant Measuring Instrument",
+    "slug": "plancks-constant-apparatus",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/cf2ce740-4498-4834-9e01-3e96a0451474/Apparatus-for-Determining-Plancks-Constant-Basic-Model.png",
+    "created_at": "2026-09-15T20:24:33.354546+00:00",
+    "sort_order": 5,
+    "updated_at": "2026-09-15T20:24:33.354546+00:00",
+    "category_id": "7aa67e88-b065-4ff9-948c-8bd5e026cd4e",
+    "description": "Photoelectric effect apparatus for determining Planck's constant, comprising a photocell housing, mercury lamp with filter set, adjustable light intensity, current multiplier and digital current/voltage display on a calibrated optical rail.",
+    "is_featured": true,
+    "is_published": true,
+    "specifications": {
+      "rows": [
+        {
+          "Value": "Photoelectric effect / stopping voltage",
+          "Parameter": "Method"
+        },
+        {
+          "Value": "×1, ×0.1, ×0.01, ×0.001",
+          "Parameter": "Current multiplier"
+        },
+        {
+          "Value": "Digital current (µA) and voltage (V)",
+          "Parameter": "Display"
+        },
+        {
+          "Value": "0–40 cm calibrated scale",
+          "Parameter": "Rail"
+        }
+      ],
+      "columns": [
+        "Parameter",
+        "Value"
+      ]
+    },
+    "short_description": "Photoelectric-effect apparatus for determining Planck's constant."
+  },
+  {
+    "id": "d2e93dba-bd48-4d08-ac02-7f2695f11b34",
+    "name": "CO2 Incubator",
+    "slug": "co2-incubator",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": null,
+    "created_at": "2026-09-15T20:12:02.536519+00:00",
+    "sort_order": 6,
+    "updated_at": "2026-09-15T20:12:02.536519+00:00",
+    "category_id": "d13108a9-01b7-4990-a05b-f18c32739403",
+    "description": "Direct-heat incubator with high-temperature decontamination and precise CO2 control for reproducible cell culture.",
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [
+        [
+          "Temperature range",
+          "Ambient +5 to 50 C"
+        ],
+        [
+          "CO2 range",
+          "0 to 20 %"
+        ],
+        [
+          "Chamber volume",
+          "170 L"
+        ]
+      ],
+      "columns": [
+        "Parameter",
+        "Value"
+      ]
+    },
+    "short_description": "Stable cell culture environment with rapid recovery."
+  },
+  {
+    "id": "698a8d01-1e81-4643-8b4d-bf60bbf86862",
+    "name": "Electron Work Function & Specific Charge Apparatus",
+    "slug": "electron-work-function-apparatus",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/392df785-2527-405b-bf21-73285d1f4ce7/Apparatus_of_Work_Function_Specific_Charge_of_Electron-removebg-preview.png",
+    "created_at": "2026-09-15T20:24:33.354546+00:00",
+    "sort_order": 6,
+    "updated_at": "2026-09-15T20:24:33.354546+00:00",
+    "category_id": "7aa67e88-b065-4ff9-948c-8bd5e026cd4e",
+    "description": "Instrument for measuring the electron work function and the specific charge of the electron, with independent filament, magnet and anode supplies, four digital displays and a solenoid-mounted vacuum tube assembly.",
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [
+        {
+          "Value": "Work function and e/m",
+          "Parameter": "Measurements"
+        },
+        {
+          "Value": "Filament, magnet and anode",
+          "Parameter": "Supplies"
+        },
+        {
+          "Value": "Four digital meters",
+          "Parameter": "Displays"
+        }
+      ],
+      "columns": [
+        "Parameter",
+        "Value"
+      ]
+    },
+    "short_description": "Combined measurement of electron work function and specific charge e/m."
+  },
+  {
+    "id": "261f09e1-cc26-45f9-bf07-7ddb4d73ae10",
+    "name": "Ag/AgCl Reference Electrode",
+    "slug": "ag-agcl-reference-electrode",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/17e05928-0aeb-47a2-88b9-e28e4c6564df/Ag_AgCl_Reference_Electrode.png",
+    "created_at": "2026-09-15T20:24:33.354546+00:00",
+    "sort_order": 7,
+    "updated_at": "2026-09-15T20:24:33.354546+00:00",
+    "category_id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "description": "Silver/silver-chloride reference electrode for potentiostatic and voltammetric measurements, available in standard and micro formats with a stable, low-drift potential.",
+    "is_featured": true,
+    "is_published": true,
+    "specifications": {
+      "rows": [
+        {
+          "Value": "Ag/AgCl reference",
+          "Parameter": "Type"
+        },
+        {
+          "Value": "Standard and micro",
+          "Parameter": "Formats"
+        },
+        {
+          "Value": "Voltammetry, potentiostatic measurement",
+          "Parameter": "Application"
+        }
+      ],
+      "columns": [
+        "Parameter",
+        "Value"
+      ]
+    },
+    "short_description": "Silver/silver-chloride reference electrode for electrochemical measurements."
+  },
+  {
+    "id": "4a6d8a6c-6d86-4118-a2b4-db6ef9289b7a",
+    "name": "Balmer Series and Rydberg Constant Apparatus",
+    "slug": "balmer-series-and-rydberg-constant",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/bc923839-0dc4-4a9d-9fad-c9e4c6b04673/balmer-series-and-rydberg-constant-removebg-preview.png",
+    "created_at": "2026-09-15T20:40:23.430304+00:00",
+    "sort_order": 20,
+    "updated_at": "2026-09-15T20:40:23.430304+00:00",
+    "category_id": "7aa67e88-b065-4ff9-948c-8bd5e026cd4e",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Spectrometer-based apparatus for observing the hydrogen Balmer series and determining the Rydberg constant."
+  },
+  {
+    "id": "33e1d42e-93a2-4c88-bff1-f31513a46b99",
+    "name": "B-H Curve Apparatus",
+    "slug": "bh-curve",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/d3713c10-8e75-4842-8e80-8a877b8a581c/bh-curve-with-deep-removebg-preview.png",
+    "created_at": "2026-09-15T20:40:23.430304+00:00",
+    "sort_order": 21,
+    "updated_at": "2026-09-15T20:40:23.430304+00:00",
+    "category_id": "7aa67e88-b065-4ff9-948c-8bd5e026cd4e",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Computer-interfaced system for tracing hysteresis (B-H) loops of ferromagnetic materials."
+  },
+  {
+    "id": "9abfa95b-8b61-4320-9090-724f1240afb8",
+    "name": "Biot-Savart's Law Apparatus",
+    "slug": "biot-savarts-law",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/7080ff04-5672-41a9-ace1-1032d6e67deb/biot-savarts-law-removebg-preview.png",
+    "created_at": "2026-09-15T20:40:23.430304+00:00",
+    "sort_order": 22,
+    "updated_at": "2026-09-15T20:40:23.430304+00:00",
+    "category_id": "7aa67e88-b065-4ff9-948c-8bd5e026cd4e",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Magnetic field measurement setup with current loops, regulated supply and digital gauss meter."
+  },
+  {
+    "id": "4535883d-eb0c-419f-b3ce-89c87f3356b6",
+    "name": "Dia, Para and Ferromagnetism Apparatus",
+    "slug": "dia-para-and-ferromagnetism",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/baefa8a0-7667-4a36-bc2a-ec7443eb56fe/dia-para-and-feromagnetism-removebg-preview.png",
+    "created_at": "2026-09-15T20:40:23.430304+00:00",
+    "sort_order": 23,
+    "updated_at": "2026-09-15T20:40:23.430304+00:00",
+    "category_id": "7aa67e88-b065-4ff9-948c-8bd5e026cd4e",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Electromagnet-based apparatus demonstrating diamagnetic, paramagnetic and ferromagnetic behaviour."
+  },
+  {
+    "id": "5ff1645d-1c39-434b-a447-5285e4e6a735",
+    "name": "Dielectric Constant Apparatus",
+    "slug": "dielectric-constant",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/a596f085-b671-49cf-a0b8-71343df6e0fa/dielectric-constant-removebg-preview.png",
+    "created_at": "2026-09-15T20:40:23.430304+00:00",
+    "sort_order": 24,
+    "updated_at": "2026-09-15T20:40:23.430304+00:00",
+    "category_id": "7aa67e88-b065-4ff9-948c-8bd5e026cd4e",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Parallel-plate capacitor setup for measuring the dielectric constant of solid and air media."
+  },
+  {
+    "id": "33bbfb2e-b8ac-45b3-b540-c431812b2795",
+    "name": "Corrosion EIS System",
+    "slug": "corrosion-eis",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/74a56eb1-7753-411d-bf1c-f2485ae52039/Corrosion_Beis.png",
+    "created_at": "2026-09-15T20:40:23.430304+00:00",
+    "sort_order": 25,
+    "updated_at": "2026-09-15T20:40:23.430304+00:00",
+    "category_id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Electrochemical impedance spectroscopy corrosion package with cell, interface and corrosion handbook."
+  },
+  {
+    "id": "fcc40038-a78a-42a8-8535-7d75ebea6ea7",
+    "name": "Cu/CuSO4 Reference Electrode",
+    "slug": "cu-cuso4-electrode",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/1bd9d61b-599f-4490-9315-53c7682f9903/Cu_CuSo4_Electrode-.png",
+    "created_at": "2026-09-15T20:40:23.430304+00:00",
+    "sort_order": 26,
+    "updated_at": "2026-09-15T20:40:23.430304+00:00",
+    "category_id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Copper / copper sulphate reference electrode for corrosion and field potential measurements."
+  },
+  {
+    "id": "0da8c2b4-044d-46e0-8230-62028af7a62f",
+    "name": "Digital Storage Oscilloscope 50 MHz",
+    "slug": "digital-storage-oscilloscope-50mhz",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/57d1d14c-d161-47c7-bb06-1cad968e530d/Digital_Storage-Oscilloscope-50Mhz.png",
+    "created_at": "2026-09-15T20:40:23.430304+00:00",
+    "sort_order": 27,
+    "updated_at": "2026-09-15T20:40:23.430304+00:00",
+    "category_id": "d2a47c37-1d06-4802-a69d-d58a35aed521",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "50 MHz dual-channel digital storage oscilloscope with 500 MSa/s sampling."
+  },
+  {
+    "id": "e953fc95-44c4-475b-838f-4ae27820f602",
+    "name": "Digital Storage Oscilloscope 100 MHz",
+    "slug": "digital-storage-oscilloscope-100mhz",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/bbfb7a82-1711-43bf-8bde-249f165f07d1/Digital-Storage-Oscilloscope-100hz.png",
+    "created_at": "2026-09-15T20:40:23.430304+00:00",
+    "sort_order": 28,
+    "updated_at": "2026-09-15T20:40:23.430304+00:00",
+    "category_id": "d2a47c37-1d06-4802-a69d-d58a35aed521",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "100 MHz dual-channel digital storage oscilloscope with built-in waveform generator."
+  },
+  {
+    "id": "6c8ad6c9-1ee4-40cb-b3e2-28b49027de29",
+    "name": "Double Beam UV-Vis Spectrophotometer SP-IUV7",
+    "slug": "double-beam-uv-vis-spectrophotometer-sp-iuv7",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/08bdede1-6e3a-4d16-97d6-8e81d3ab2a01/Double-Beam-UV-Vis-Spectrophotometer-SP-IUV7_8_-removebg-preview.png",
+    "created_at": "2026-09-15T20:40:23.430304+00:00",
+    "sort_order": 29,
+    "updated_at": "2026-09-15T20:40:23.430304+00:00",
+    "category_id": "8e0e3a7d-2e5f-4603-9df2-faab3e84ad7e",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Double beam UV-visible spectrophotometer for routine and research-grade absorbance analysis."
+  },
+  {
+    "id": "c9abb88a-063a-4f14-9214-7ae5837f7707",
+    "name": "Double Beam UV Vis Spectrophotometer SP LUV1910 1920",
+    "slug": "double-beam-uv-vis-spectrophotometer-sp-luv1910-1920",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/1157b158-283f-45dc-9b21-54f421be88fe/Double-Beam-UV-Vis-Spectrophotometer-SP-LUV1910-1920_7_-removebg-preview.png",
+    "created_at": "2026-09-15T20:42:56.98366+00:00",
+    "sort_order": 40,
+    "updated_at": "2026-09-15T20:42:56.98366+00:00",
+    "category_id": "8e0e3a7d-2e5f-4603-9df2-faab3e84ad7e",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Double beam UV-Vis spectrophotometer with wide wavelength range and touch-screen control."
+  },
+  {
+    "id": "08b42818-35c5-4e24-894f-cb4d3edf8c9e",
+    "name": "Electrode Polishing Kit",
+    "slug": "electrode-polishing-kit",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/1e3c4b8d-e4f7-43b4-9101-d0b716ac85b2/Electrode_Polishing_Kit.png",
+    "created_at": "2026-09-15T20:42:56.98366+00:00",
+    "sort_order": 41,
+    "updated_at": "2026-09-15T20:42:56.98366+00:00",
+    "category_id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Polishing pads and alumina slurries for preparing working electrode surfaces."
+  },
+  {
+    "id": "b0b68289-b49e-42df-8bd7-fbf8eb69e04a",
+    "name": "Electrolytic Cell Non Sealed",
+    "slug": "electrolytic-cell-non-sealed",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/8c9afbd4-09de-41ba-a158-56f250e28e52/Electrolytic_Cell_Non-Sealed.png",
+    "created_at": "2026-09-15T20:42:56.98366+00:00",
+    "sort_order": 42,
+    "updated_at": "2026-09-15T20:42:56.98366+00:00",
+    "category_id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Open electrolytic cell for routine three-electrode electrochemical measurements."
+  },
+  {
+    "id": "daead38d-09c8-4981-8a31-4ff3e3eb8fa3",
+    "name": "EM Apparatus",
+    "slug": "em-apparatus",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/fadd3618-3b1b-49da-8b7f-3876f06694ca/EM-Appartaus.png",
+    "created_at": "2026-09-15T20:42:56.98366+00:00",
+    "sort_order": 43,
+    "updated_at": "2026-09-15T20:42:56.98366+00:00",
+    "category_id": "7aa67e88-b065-4ff9-948c-8bd5e026cd4e",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Helmholtz coil apparatus for determining the charge-to-mass ratio of the electron."
+  },
+  {
+    "id": "789f6d70-11a6-4c52-b4ef-f1778257b2b5",
+    "name": "EmStat 4T",
+    "slug": "emstat-4t",
+    "gallery": [],
+    "brand_id": "a9042b41-4027-445f-bae0-b8044f82b6ee",
+    "image_url": "/__l5e/assets-v1/d4f73bec-3fc9-4ef0-becb-e92a8d546dce/EMSTAT-4t-2.png",
+    "created_at": "2026-09-15T20:42:56.98366+00:00",
+    "sort_order": 44,
+    "updated_at": "2026-09-15T20:42:56.98366+00:00",
+    "category_id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Handheld touch-screen potentiostat with on-board method execution."
+  },
+  {
+    "id": "1b2c1813-ebf6-4ce8-a180-e1837a562352",
+    "name": "EmStat 4X",
+    "slug": "emstat-4x",
+    "gallery": [],
+    "brand_id": "a9042b41-4027-445f-bae0-b8044f82b6ee",
+    "image_url": "/__l5e/assets-v1/6355c9e1-d21c-4879-b0a8-cac5b2f3fa96/EmStat4X-1.png",
+    "created_at": "2026-09-15T20:42:56.98366+00:00",
+    "sort_order": 45,
+    "updated_at": "2026-09-15T20:42:56.98366+00:00",
+    "category_id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Compact potentiostat/galvanostat with impedance spectroscopy and wide current range."
+  },
+  {
+    "id": "ac3f0018-0467-4eb7-8c68-56c5e97ecce1",
+    "name": "EmStat Blue",
+    "slug": "emstat-blue",
+    "gallery": [],
+    "brand_id": "a9042b41-4027-445f-bae0-b8044f82b6ee",
+    "image_url": "/__l5e/assets-v1/8446297a-43b4-44d6-b894-1f6d193b7a25/ES-BLue.png",
+    "created_at": "2026-09-15T20:42:56.98366+00:00",
+    "sort_order": 46,
+    "updated_at": "2026-09-15T20:42:56.98366+00:00",
+    "category_id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Wireless Bluetooth potentiostat bundle for mobile electrochemical measurements."
+  },
+  {
+    "id": "3403a58f-bf21-4104-ade9-7818588d13dc",
+    "name": "Experimental System Of CW NMR Complete Model",
+    "slug": "experimental-system-of-cw-nmr-complete-model",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/10e39d6b-969d-4606-b6a7-bb398093bdad/Experimental-System-of-CW-NMR-Complete-Model.png",
+    "created_at": "2026-09-15T20:42:56.98366+00:00",
+    "sort_order": 47,
+    "updated_at": "2026-09-15T20:42:56.98366+00:00",
+    "category_id": "7aa67e88-b065-4ff9-948c-8bd5e026cd4e",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Continuous-wave NMR teaching system with magnet, counter and oscilloscope."
+  },
+  {
+    "id": "ca3a71b1-0e03-4fcf-b467-2bd897cbd3fd",
+    "name": "Hall Effect Experimental Apparatus",
+    "slug": "hall-effect-experimental-apparatus",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/31895ff6-b94a-4764-ae36-b690ecb7d688/Hall-Effect-Experimental-Apparatus.png",
+    "created_at": "2026-09-15T20:48:42.891702+00:00",
+    "sort_order": 50,
+    "updated_at": "2026-09-15T20:48:42.891702+00:00",
+    "category_id": "7aa67e88-b065-4ff9-948c-8bd5e026cd4e",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Bench apparatus for measuring Hall voltage and carrier properties in semiconductors."
+  },
+  {
+    "id": "e3c1e942-6b67-47d9-a2f1-bf7e747ff470",
+    "name": "Fabry Perot Interferometer",
+    "slug": "fabry-perot-interferometer",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/bb7b7ccf-5125-4c3c-bd84-b687f86ec8c0/Fabry-Perot_Interferometer-removebg-preview.png",
+    "created_at": "2026-09-15T20:48:42.891702+00:00",
+    "sort_order": 51,
+    "updated_at": "2026-09-15T20:48:42.891702+00:00",
+    "category_id": "7aa67e88-b065-4ff9-948c-8bd5e026cd4e",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Precision Fabry-Perot interferometer for high-resolution spectral line studies."
+  },
+  {
+    "id": "99b751a9-aa22-416e-aae6-adf5f1b1d5d1",
+    "name": "Franck Hertz Apparatus",
+    "slug": "franck-hertz-apparatus",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/c87dc42c-345b-4d72-929a-b1581f51ed3b/Franck_Hertz_Apparatus-removebg-preview.png",
+    "created_at": "2026-09-15T20:48:42.891702+00:00",
+    "sort_order": 52,
+    "updated_at": "2026-09-15T20:48:42.891702+00:00",
+    "category_id": "7aa67e88-b065-4ff9-948c-8bd5e026cd4e",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Complete Franck-Hertz setup with power supply and oscilloscope readout."
+  },
+  {
+    "id": "0c602af3-def6-4685-88c1-2b940cebb8ad",
+    "name": "FTIR",
+    "slug": "ftir",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/4f046aa7-ed00-4975-87cc-352ef6cc5551/FTIR.png",
+    "created_at": "2026-09-15T20:48:42.891702+00:00",
+    "sort_order": 53,
+    "updated_at": "2026-09-15T20:48:42.891702+00:00",
+    "category_id": "8e0e3a7d-2e5f-4603-9df2-faab3e84ad7e",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "FTIR-750 Fourier transform infrared spectrometer for material identification."
+  },
+  {
+    "id": "9dea8edc-1407-47d8-b3bc-017fab676b76",
+    "name": "FTIR7800 003",
+    "slug": "ftir7800-003",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/02221fbc-bedb-4f2c-b3c4-1fdece39c91b/FTIR7800-003-removebg-preview-1.png",
+    "created_at": "2026-09-15T20:48:42.891702+00:00",
+    "sort_order": 54,
+    "updated_at": "2026-09-15T20:48:42.891702+00:00",
+    "category_id": "8e0e3a7d-2e5f-4603-9df2-faab3e84ad7e",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "FTIR7800 Fourier transform infrared spectrometer with high signal-to-noise performance."
+  },
+  {
+    "id": "c838eeca-2bc6-4c58-a86c-79bc90173286",
+    "name": "Glassy Carbon Working Electrode",
+    "slug": "glassy-carbon-working-electrode",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/9685278c-2d91-4a32-bb89-3cbde0dcf2fd/Glassy_Carbon_Working_Electrode.png",
+    "created_at": "2026-09-15T20:48:42.891702+00:00",
+    "sort_order": 55,
+    "updated_at": "2026-09-15T20:48:42.891702+00:00",
+    "category_id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Glassy carbon working electrodes for voltammetry and general electroanalysis."
+  },
+  {
+    "id": "c6f321a9-9439-485e-bdb5-8a0b1519f6d1",
+    "name": "Gold Micro Electrode",
+    "slug": "gold-micro-electrode",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/59d62c5a-0aae-46c8-a1eb-cf2c6a426d3d/Gold_Micro_Electrode.png",
+    "created_at": "2026-09-15T20:48:42.891702+00:00",
+    "sort_order": 56,
+    "updated_at": "2026-09-15T20:48:42.891702+00:00",
+    "category_id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Gold microelectrodes for low-current and small-volume electrochemical work."
+  },
+  {
+    "id": "a1f8caf1-574e-4361-8489-e689f2a225fd",
+    "name": "Gold Screen Printed Electrode",
+    "slug": "gold-screen-printed-electrode",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/98ac2e62-dc6d-4e82-9fcf-812b99087a01/Gold_Screen_Printed_Electrode.png",
+    "created_at": "2026-09-15T20:48:42.891702+00:00",
+    "sort_order": 57,
+    "updated_at": "2026-09-15T20:48:42.891702+00:00",
+    "category_id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Disposable gold screen-printed electrodes for sensing and biosensor applications."
+  },
+  {
+    "id": "781897fe-e0ad-43e3-be46-9eb407e00d86",
+    "name": "Graphite Electrode",
+    "slug": "graphite-electrode",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/7c36cb1c-251b-42b9-940d-f26251a69517/Graphite_Electrode.png",
+    "created_at": "2026-09-15T20:48:42.891702+00:00",
+    "sort_order": 58,
+    "updated_at": "2026-09-15T20:48:42.891702+00:00",
+    "category_id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Graphite electrodes for counter and working electrode configurations."
+  },
+  {
+    "id": "0abd7a18-c27e-4148-8d09-0ed94ac3802b",
+    "name": "Graphite Rod",
+    "slug": "graphite-rod",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/fed0e577-89b2-4ee1-a0a0-94b2461f3339/Graphite_Rod.png",
+    "created_at": "2026-09-15T20:48:42.891702+00:00",
+    "sort_order": 59,
+    "updated_at": "2026-09-15T20:48:42.891702+00:00",
+    "category_id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "High-purity graphite rod used as a counter electrode."
+  },
+  {
+    "id": "b8f62654-5e6d-4df7-b12c-bc05950b6fce",
+    "name": "Hall Effect",
+    "slug": "hall-effect",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/141ae9d3-8204-4d58-977f-fb38965a7a30/hall-effect-removebg-preview.png",
+    "created_at": "2026-09-15T20:50:50.707671+00:00",
+    "sort_order": 60,
+    "updated_at": "2026-09-15T20:50:50.707671+00:00",
+    "category_id": "7aa67e88-b065-4ff9-948c-8bd5e026cd4e",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Hall effect experiment set with gauss meter, constant current source and power supply."
+  },
+  {
+    "id": "37602e25-8578-43bb-b43d-89b52e37e226",
+    "name": "Handheld Oscilloscope",
+    "slug": "handheld-oscilloscope",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/756a5b8d-35c0-454c-8516-d96f88084135/Handheld-Oscilloscpe.png",
+    "created_at": "2026-09-15T20:50:50.707671+00:00",
+    "sort_order": 61,
+    "updated_at": "2026-09-15T20:50:50.707671+00:00",
+    "category_id": "d2a47c37-1d06-4802-a69d-d58a35aed521",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Portable two-channel oscilloscope and multimeter with probe set."
+  },
+  {
+    "id": "ec3ed81e-1925-44b9-bbf9-752010dc0f1f",
+    "name": "H Cells Assembly",
+    "slug": "h-cells-assembly",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/f950d5a0-936c-4b29-a858-d75c8b662098/H-Cells_Assembly.png",
+    "created_at": "2026-09-15T20:50:50.707671+00:00",
+    "sort_order": 62,
+    "updated_at": "2026-09-15T20:50:50.707671+00:00",
+    "category_id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Twin-compartment H-cell assembly for membrane-separated electrochemical experiments."
+  },
+  {
+    "id": "20051c22-1507-4a8a-9d7e-8faf6bbb1a90",
+    "name": "He Ne Laser",
+    "slug": "he-ne-laser",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/31b1210d-9d02-4e6e-9c9a-4bfb9606c718/He_Ne_Laser-removebg-preview.png",
+    "created_at": "2026-09-15T20:50:50.707671+00:00",
+    "sort_order": 63,
+    "updated_at": "2026-09-15T20:50:50.707671+00:00",
+    "category_id": "7aa67e88-b065-4ff9-948c-8bd5e026cd4e",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Helium-neon laser source for optics and interferometry experiments."
+  },
+  {
+    "id": "5cec2b06-01cc-4df8-9e10-cbc5fe253539",
+    "name": "Helmholtz Coil Magnetic Field Apparatus",
+    "slug": "helmholtz-coil-magnetic-field-apparatus",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/37ad9164-d2a5-431a-9dc5-9a0f903961c4/Helmholtz-Coil-Magnetic-Field-Apparatus.png",
+    "created_at": "2026-09-15T20:50:50.707671+00:00",
+    "sort_order": 64,
+    "updated_at": "2026-09-15T20:50:50.707671+00:00",
+    "category_id": "7aa67e88-b065-4ff9-948c-8bd5e026cd4e",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Helmholtz coil set with digital teslameter for mapping magnetic fields."
+  },
+  {
+    "id": "92dcc0b2-9fba-4c78-a3d0-8e20f06d59d3",
+    "name": "Hg HgO Reference Electrode",
+    "slug": "hg-hgo-reference-electrode",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/3edc6e2e-df38-42c4-9dd2-edc1b23a4155/Hg_HgO_Reference_Electrode.png",
+    "created_at": "2026-09-15T20:50:50.707671+00:00",
+    "sort_order": 65,
+    "updated_at": "2026-09-15T20:50:50.707671+00:00",
+    "category_id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Mercury/mercuric oxide reference electrode for alkaline electrolyte measurements."
+  },
+  {
+    "id": "61e96908-d21a-4628-bf5b-2f91d09f8942",
+    "name": "Handheld XRF Analyser",
+    "slug": "handheld-xrf-analyser",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/a57f6290-b272-4b64-9061-3624415f3517/IMG_20250714_005305-1-scaled.jpg",
+    "created_at": "2026-09-15T20:50:50.707671+00:00",
+    "sort_order": 66,
+    "updated_at": "2026-09-15T20:50:50.707671+00:00",
+    "category_id": "8e0e3a7d-2e5f-4603-9df2-faab3e84ad7e",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Portable X-ray fluorescence analyser with carry case, cradle and battery pack."
+  },
+  {
+    "id": "910cb1cc-022d-43a9-aea6-227c7fa60823",
+    "name": "PalmSens Instrument Range",
+    "slug": "palmsens-instrument-range",
+    "gallery": [],
+    "brand_id": "a9042b41-4027-445f-bae0-b8044f82b6ee",
+    "image_url": "/__l5e/assets-v1/36057b02-effc-44c0-931f-d72993a66089/Instrument_group_transparent-scaled-1.png",
+    "created_at": "2026-09-15T20:50:50.707671+00:00",
+    "sort_order": 67,
+    "updated_at": "2026-09-15T20:50:50.707671+00:00",
+    "category_id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Complete PalmSens range including MultiPalmSens4, PalmSens4, Sensit and EmStat units."
+  },
+  {
+    "id": "1759ee3c-5351-4840-9334-731466f6bdeb",
+    "name": "Integrated Experimental System Of Faraday And Zeeman Effects",
+    "slug": "integrated-experimental-system-of-faraday-and-zeeman-effects",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/31e08867-b338-4e52-a970-959963df2c6a/Integrated-Experimental-System-of-Faraday-and-Zeeman-Effects-scaled.png",
+    "created_at": "2026-09-15T20:50:50.707671+00:00",
+    "sort_order": 68,
+    "updated_at": "2026-09-15T20:50:50.707671+00:00",
+    "category_id": "7aa67e88-b065-4ff9-948c-8bd5e026cd4e",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Optical bench system for studying Faraday rotation and Zeeman splitting."
+  },
+  {
+    "id": "7ca94d83-93a4-4058-9dbe-df491c52a19a",
+    "name": "Kerr Effect",
+    "slug": "kerr-effect",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/b085832a-bde7-40bf-a1d9-ccd4511a635f/kerr-effect2-removebg-preview.png",
+    "created_at": "2026-09-15T20:50:50.707671+00:00",
+    "sort_order": 69,
+    "updated_at": "2026-09-15T20:50:50.707671+00:00",
+    "category_id": "7aa67e88-b065-4ff9-948c-8bd5e026cd4e",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Optical bench apparatus for demonstrating the electro-optic Kerr effect."
+  },
+  {
+    "id": "f141025d-8704-45a3-84bf-f73fc75ca330",
+    "name": "Lorentz Force Demonstrator",
+    "slug": "lorentz-force-demonstrator",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/0a7cc175-fe18-4a93-9a28-dc41a270ee62/Lorentz_Force_Demonstrator-removebg-preview.png",
+    "created_at": "2026-09-15T20:53:30.328047+00:00",
+    "sort_order": 100,
+    "updated_at": "2026-09-15T20:53:30.328047+00:00",
+    "category_id": "7aa67e88-b065-4ff9-948c-8bd5e026cd4e",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Demonstration apparatus for visualising the Lorentz force on moving charges."
+  },
+  {
+    "id": "6ee950df-02c3-4429-831e-24702e000a56",
+    "name": "Michelson & Fabry Perot Interferometer",
+    "slug": "michelson-fabry-perot-interferometer",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/bad693a3-dbac-4257-92d4-4e3c26938c40/Michelson_Fabry-Perot_Interferometer-removebg-preview.png",
+    "created_at": "2026-09-15T20:53:30.328047+00:00",
+    "sort_order": 101,
+    "updated_at": "2026-09-15T20:53:30.328047+00:00",
+    "category_id": "7aa67e88-b065-4ff9-948c-8bd5e026cd4e",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Combined Michelson and Fabry-Perot interferometer bench with He-Ne laser source."
+  },
+  {
+    "id": "5c995cfa-accd-4238-a82c-6fc9dcbd7e8c",
+    "name": "Michelson Interferometer",
+    "slug": "michelson-interferometer",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/34f0df77-adfe-44c7-bd30-b31eaa14f74e/Michelson_Interferometer-removebg-preview.png",
+    "created_at": "2026-09-15T20:53:30.328047+00:00",
+    "sort_order": 102,
+    "updated_at": "2026-09-15T20:53:30.328047+00:00",
+    "category_id": "7aa67e88-b065-4ff9-948c-8bd5e026cd4e",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Precision optical bench for interference and wavelength measurement experiments."
+  },
+  {
+    "id": "dea90fdd-57a0-4fd5-933c-401d0d53f382",
+    "name": "Microwave Ferromagnetic Resonance Apparatus",
+    "slug": "microwave-ferromagnetic-resonance-apparatus",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/6e13ad9d-5cb3-42fb-b622-7697a3d91f86/Microwave-Ferromagnetic-Resonance-Apparatus-scaled.png",
+    "created_at": "2026-09-15T20:53:30.328047+00:00",
+    "sort_order": 103,
+    "updated_at": "2026-09-15T20:53:30.328047+00:00",
+    "category_id": "7aa67e88-b065-4ff9-948c-8bd5e026cd4e",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Complete microwave ferromagnetic resonance system with magnet, detector and oscilloscope."
+  },
+  {
+    "id": "f8532e6c-8387-472c-8ede-623749829fd9",
+    "name": "Mercury Mercurous Sulfate Electrode",
+    "slug": "mercury-mercurous-sulfate-electrode",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/904ea909-adf5-4363-a8db-2b3d6839e648/Merury_Mercurous_Sulfate_Electrode.png",
+    "created_at": "2026-09-15T20:53:30.328047+00:00",
+    "sort_order": 104,
+    "updated_at": "2026-09-15T20:53:30.328047+00:00",
+    "category_id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Hg/Hg2SO4 reference electrode for sulfate-based electrochemical measurements."
+  },
+  {
+    "id": "a05f6273-8112-4abe-8034-d3ab06340280",
+    "name": "Metal Electrode",
+    "slug": "metal-electrode",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/2e6e69e8-110b-4c60-ae89-acc78f46adf9/Metal_Electrode.png",
+    "created_at": "2026-09-15T20:53:30.328047+00:00",
+    "sort_order": 105,
+    "updated_at": "2026-09-15T20:53:30.328047+00:00",
+    "category_id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Solid metal working electrodes for general voltammetric applications."
+  },
+  {
+    "id": "249fa40d-f6b1-499f-a31d-9e0907771376",
+    "name": "L Shape Glassy Carbon Electrode",
+    "slug": "l-shape-glassy-carbon-electrode",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/1c28d2c3-f67b-458f-8d00-b3de9042d1fd/L_Shape_Glassy_Carbon_Electrode.png",
+    "created_at": "2026-09-15T20:53:30.328047+00:00",
+    "sort_order": 106,
+    "updated_at": "2026-09-15T20:53:30.328047+00:00",
+    "category_id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "L-shaped glassy carbon working electrode for specialised cell geometries."
+  },
+  {
+    "id": "342720d9-e47e-488a-849b-c09c9f268049",
+    "name": "MultiPalmSens 4",
+    "slug": "multipalmsens-4",
+    "gallery": [],
+    "brand_id": "a9042b41-4027-445f-bae0-b8044f82b6ee",
+    "image_url": "/__l5e/assets-v1/534f13d8-c35f-4320-9f2f-5f3fb2210088/Multi-Chennel-Palm-Sens-4.png",
+    "created_at": "2026-09-15T20:53:30.328047+00:00",
+    "sort_order": 107,
+    "updated_at": "2026-09-15T20:53:30.328047+00:00",
+    "category_id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Ten-channel potentiostat/galvanostat for parallel electrochemical measurements."
+  },
+  {
+    "id": "3148ea3d-90f7-4446-9113-da0bac71d9c2",
+    "name": "MultiEmStat 3+ Laboratory Setup",
+    "slug": "multiemstat-3-laboratory-setup",
+    "gallery": [],
+    "brand_id": "a9042b41-4027-445f-bae0-b8044f82b6ee",
+    "image_url": "/__l5e/assets-v1/ec74e33e-48f0-4f3b-921a-4a377094707c/MES-in-lab-scaled.jpg",
+    "created_at": "2026-09-15T20:53:30.328047+00:00",
+    "sort_order": 108,
+    "updated_at": "2026-09-15T20:53:30.328047+00:00",
+    "category_id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Multichannel MultiEmStat3+ potentiostat in a routine laboratory workflow."
+  },
+  {
+    "id": "613f0e85-342c-4007-8be5-be8173660b1d",
+    "name": "Labdex Spectrophotometer",
+    "slug": "labdex-spectrophotometer",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/fa1bff48-6229-4f66-aa30-4a7a6fad179e/Labdex_Spectrophotometer-removebg-preview.png",
+    "created_at": "2026-09-15T20:53:30.328047+00:00",
+    "sort_order": 109,
+    "updated_at": "2026-09-15T20:53:30.328047+00:00",
+    "category_id": "8e0e3a7d-2e5f-4603-9df2-faab3e84ad7e",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Touchscreen UV-Vis spectrophotometer for routine analytical laboratory work."
+  },
+  {
+    "id": "cb8b5e42-05fb-4633-987e-ab3d030777cf",
+    "name": "MultiEmStat4 LR",
+    "slug": "multiemstat4-lr",
+    "gallery": [],
+    "brand_id": "a9042b41-4027-445f-bae0-b8044f82b6ee",
+    "image_url": "/__l5e/assets-v1/4bdccb04-4630-4571-872f-e742b2f8bfb5/Multi-Emstat-4-scaled.png",
+    "created_at": "2026-09-15T20:56:22.416993+00:00",
+    "sort_order": 110,
+    "updated_at": "2026-09-15T20:56:22.416993+00:00",
+    "category_id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Twelve-channel MultiEmStat4 LR potentiostat for parallel low-range measurements."
+  },
+  {
+    "id": "09df495b-f35e-4203-8455-65dc0c94e874",
+    "name": "PalmSens4",
+    "slug": "palmsens4",
+    "gallery": [],
+    "brand_id": "a9042b41-4027-445f-bae0-b8044f82b6ee",
+    "image_url": "/__l5e/assets-v1/8d002208-af6d-415b-a173-c66c445aa8f3/Palm-Sens-4-scaled.png",
+    "created_at": "2026-09-15T20:56:22.416993+00:00",
+    "sort_order": 111,
+    "updated_at": "2026-09-15T20:56:22.416993+00:00",
+    "category_id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Portable high-performance potentiostat, galvanostat and impedance analyser."
+  },
+  {
+    "id": "67dbd46f-fa6f-4f7b-8907-fbe3921b7411",
+    "name": "Nexus Potentiostat Galvanostat",
+    "slug": "nexus-potentiostat-galvanostat",
+    "gallery": [],
+    "brand_id": "a9042b41-4027-445f-bae0-b8044f82b6ee",
+    "image_url": "/__l5e/assets-v1/74bf05cf-70e3-47cc-9679-fe0b5851f6af/Nexus-removebg-preview.png",
+    "created_at": "2026-09-15T20:56:22.416993+00:00",
+    "sort_order": 112,
+    "updated_at": "2026-09-15T20:56:22.416993+00:00",
+    "category_id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Low-noise benchtop potentiostat/galvanostat for demanding electrochemical research."
+  },
+  {
+    "id": "653401d4-81cc-4e9a-9b37-bb85105442e3",
+    "name": "Non Aqueous Ag Ag Reference Electrode",
+    "slug": "non-aqueous-ag-ag-reference-electrode",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/fe267145-709e-4ad3-82c2-f860e16fbbd0/Non_Aqueous_Ag_Ag_Reference_Electrode.png",
+    "created_at": "2026-09-15T20:56:22.416993+00:00",
+    "sort_order": 113,
+    "updated_at": "2026-09-15T20:56:22.416993+00:00",
+    "category_id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Silver/silver-ion reference electrode for non-aqueous electrolyte systems."
+  },
+  {
+    "id": "6bd6470c-9ae1-468f-a4ea-63082531c571",
+    "name": "Photo Electrochemical Cell",
+    "slug": "photo-electrochemical-cell",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/61a0a1c1-f241-4d01-943a-ee49d68ad030/Photo_Electrochemical_Cell.png",
+    "created_at": "2026-09-15T20:56:22.416993+00:00",
+    "sort_order": 114,
+    "updated_at": "2026-09-15T20:56:22.416993+00:00",
+    "category_id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Optical-window cell for photo-electrochemical and photocatalysis studies."
+  },
+  {
+    "id": "bff04304-f30d-4e56-a57d-ad9faee962dc",
+    "name": "Platinum Conductivity Electrode",
+    "slug": "platinum-conductivity-electrode",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/053e993e-21ff-4724-b588-7d37ab556fe1/Platinum_Conductivity_Electrode.png",
+    "created_at": "2026-09-15T20:56:22.416993+00:00",
+    "sort_order": 115,
+    "updated_at": "2026-09-15T20:56:22.416993+00:00",
+    "category_id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Platinum conductivity probe for solution conductance measurements."
+  },
+  {
+    "id": "6a749bea-6b8a-4b9e-8a54-1c245ce0a03a",
+    "name": "Platinum Mesh Electrode",
+    "slug": "platinum-mesh-electrode",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/7ddc0f86-ef4f-4db7-9d60-8f63b2c2f750/Platinum_Mesh_Electrode.png",
+    "created_at": "2026-09-15T20:56:22.416993+00:00",
+    "sort_order": 116,
+    "updated_at": "2026-09-15T20:56:22.416993+00:00",
+    "category_id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "High surface area platinum mesh counter electrode."
+  },
+  {
+    "id": "69987cb4-c998-4e4b-89eb-54060d666552",
+    "name": "Platinum Plate Electrode",
+    "slug": "platinum-plate-electrode",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/314a3d18-2137-42c5-a92f-c8153029be03/Platinum_Plate_Electrode.png",
+    "created_at": "2026-09-15T20:56:22.416993+00:00",
+    "sort_order": 117,
+    "updated_at": "2026-09-15T20:56:22.416993+00:00",
+    "category_id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Platinum plate electrode for counter and working electrode applications."
+  },
+  {
+    "id": "744b5eac-ab45-41ee-bdfe-2447f9dc11c0",
+    "name": "Newton's Ring Experiment Apparatus Complete Model",
+    "slug": "newtons-ring-experiment-apparatus-complete-model",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/952b00f9-fc38-4401-9404-ff45967dbed5/Newton_s_Ring_Experiment_Apparatus_-_Complete_Model-removebg-preview.png",
+    "created_at": "2026-09-15T20:56:22.416993+00:00",
+    "sort_order": 118,
+    "updated_at": "2026-09-15T20:56:22.416993+00:00",
+    "category_id": "7aa67e88-b065-4ff9-948c-8bd5e026cd4e",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Complete Newton's ring apparatus with mercury/sodium lamp power supply."
+  },
+  {
+    "id": "c0e1c4d1-1d60-4301-90ec-539d56769f30",
+    "name": "NIR Spectrophotometer SP LIF460",
+    "slug": "nir-spectrophotometer-sp-lif460",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/7d91b84c-54d5-4392-b438-2086e1ef8d92/NIR-Spectrophotometer-SP-LIF460_6_-removebg-preview.png",
+    "created_at": "2026-09-15T20:56:22.416993+00:00",
+    "sort_order": 119,
+    "updated_at": "2026-09-15T20:56:22.416993+00:00",
+    "category_id": "8e0e3a7d-2e5f-4603-9df2-faab3e84ad7e",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Near-infrared spectrophotometer for rapid non-destructive material analysis."
+  },
+  {
+    "id": "31613ccf-1a90-442c-bb7a-8a5199900e3c",
+    "name": "Platinum Wire Electrode",
+    "slug": "platinum-wire-electrode",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/207c4291-a6df-4027-85fc-5502c50cd15a/Platinum_Wire_Electrode.png",
+    "created_at": "2026-09-15T21:00:15.20125+00:00",
+    "sort_order": 120,
+    "updated_at": "2026-09-15T21:00:15.20125+00:00",
+    "category_id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Platinum wire counter electrode for three-electrode cell configurations."
+  },
+  {
+    "id": "fa8e2d0f-b7bc-4f1d-a5f6-4f3b86d7f744",
+    "name": "Platinum Working Electrode",
+    "slug": "platinum-working-electrode",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/7a81579e-c420-40a8-9ebd-75dcec425981/Platinum_Working_Electrode.png",
+    "created_at": "2026-09-15T21:00:15.20125+00:00",
+    "sort_order": 121,
+    "updated_at": "2026-09-15T21:00:15.20125+00:00",
+    "category_id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Polished platinum disc working electrodes in several diameters."
+  },
+  {
+    "id": "b11401fc-1333-4869-96a3-58ddd4c8cd10",
+    "name": "Saturated Calomel Electrode",
+    "slug": "saturated-calomel-electrode",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/dfc2973a-c396-4cb7-ba55-77da17173522/Saturated_Calomel_Electrode.png",
+    "created_at": "2026-09-15T21:00:15.20125+00:00",
+    "sort_order": 122,
+    "updated_at": "2026-09-15T21:00:15.20125+00:00",
+    "category_id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Saturated calomel reference electrode for aqueous electrochemistry."
+  },
+  {
+    "id": "a98d0dde-c70c-4068-9516-11584e5293c4",
+    "name": "Screen Printed Carbon Electrode",
+    "slug": "screen-printed-carbon-electrode",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/12c53493-1e12-41ff-8de1-48ea6b04e204/Screen_Printed_Carbon_Electrode.png",
+    "created_at": "2026-09-15T21:00:15.20125+00:00",
+    "sort_order": 123,
+    "updated_at": "2026-09-15T21:00:15.20125+00:00",
+    "category_id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Disposable screen-printed carbon electrodes for sensing applications."
+  },
+  {
+    "id": "6c481aa3-bc23-4797-b11d-01e4b0328767",
+    "name": "Sealed Electrolytic Cell",
+    "slug": "sealed-electrolytic-cell",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/4b1f41ba-ee74-483b-8011-4d3aec2c257d/Seal_Electrolytic_Cel.png",
+    "created_at": "2026-09-15T21:00:15.20125+00:00",
+    "sort_order": 124,
+    "updated_at": "2026-09-15T21:00:15.20125+00:00",
+    "category_id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Gas-tight electrolytic cell with inlet and outlet ports for controlled atmospheres."
+  },
+  {
+    "id": "abce470a-8a0c-4be5-85b3-7ee30b3f11d7",
+    "name": "Sensit Smart",
+    "slug": "sensit-smart",
+    "gallery": [],
+    "brand_id": "a9042b41-4027-445f-bae0-b8044f82b6ee",
+    "image_url": "/__l5e/assets-v1/043e8525-f8ae-407b-8120-f1d1a2a85599/Sensit-Smart-transparent-with-sensor-and-leds.png",
+    "created_at": "2026-09-15T21:00:15.20125+00:00",
+    "sort_order": 125,
+    "updated_at": "2026-09-15T21:00:15.20125+00:00",
+    "category_id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Pocket-sized USB-C potentiostat for screen-printed electrode measurements."
+  },
+  {
+    "id": "851c28f7-4b4c-4f62-9d71-25e85eb3a192",
+    "name": "Sensit Wearable",
+    "slug": "sensit-wearable",
+    "gallery": [],
+    "brand_id": "a9042b41-4027-445f-bae0-b8044f82b6ee",
+    "image_url": "/__l5e/assets-v1/b02fa0de-81b2-448c-abc7-b107969a099e/Sensit-Wearable-on-arm-removebg-preview.png",
+    "created_at": "2026-09-15T21:00:15.20125+00:00",
+    "sort_order": 126,
+    "updated_at": "2026-09-15T21:00:15.20125+00:00",
+    "category_id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Skin-worn wireless electrochemical sensor platform for continuous monitoring."
+  },
+  {
+    "id": "cbf60fd2-2717-4b48-a9f8-caadfcca0fd7",
+    "name": "PalmSens4 And Sensit Range",
+    "slug": "palmsens4-and-sensit-range",
+    "gallery": [],
+    "brand_id": "a9042b41-4027-445f-bae0-b8044f82b6ee",
+    "image_url": "/__l5e/assets-v1/151881f0-ab58-46f5-8607-0488585e89f4/PS4_sensits-removebg-preview-1.png",
+    "created_at": "2026-09-15T21:00:15.20125+00:00",
+    "sort_order": 127,
+    "updated_at": "2026-09-15T21:00:15.20125+00:00",
+    "category_id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "PalmSens4 with the Sensit portable sensing family and mobile app workflow."
+  },
+  {
+    "id": "f1088745-c788-40b5-a304-b1e680ef63de",
+    "name": "P N Junction Energy Band Gap Apparatus",
+    "slug": "p-n-junction-energy-band-gap-apparatus",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/c497a203-4dc1-4976-b08f-8503c08097be/p-n-junction-energy-band-gap-removebg-preview.png",
+    "created_at": "2026-09-15T21:00:15.20125+00:00",
+    "sort_order": 128,
+    "updated_at": "2026-09-15T21:00:15.20125+00:00",
+    "category_id": "7aa67e88-b065-4ff9-948c-8bd5e026cd4e",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Teaching apparatus for measuring the energy band gap of a P-N junction diode."
+  },
+  {
+    "id": "d640e2e4-1409-45c9-963e-23e19dcfe181",
+    "name": "Adjustable Regulated DC Power Supply",
+    "slug": "adjustable-regulated-dc-power-supply",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/381317cb-cf37-43da-aaff-3b29d3365dd2/Power-Supply.png",
+    "created_at": "2026-09-15T21:00:15.20125+00:00",
+    "sort_order": 129,
+    "updated_at": "2026-09-15T21:00:15.20125+00:00",
+    "category_id": "e83b2b4b-80e8-4cdc-84a0-6973c1da9c84",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": "Programmable regulated DC power supply with voltage, current and power readout."
+  },
+  {
+    "id": "85adbd89-8382-4170-8fac-64a8642b62c1",
+    "name": "Specimen Holder",
+    "slug": "specimen-holder",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/bbda81fa-0b98-4fa2-a819-db54dba11a43/Specimen_Holder-.png",
+    "created_at": "2026-09-15T21:02:29.914367+00:00",
+    "sort_order": 130,
+    "updated_at": "2026-09-15T21:02:29.914367+00:00",
+    "category_id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": null
+  },
+  {
+    "id": "3acc33b0-3b8b-4e1e-b89e-bd612da47ad5",
+    "name": "Specimen Clamp",
+    "slug": "specimen-clamp",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/1b3d4a64-7217-48e4-9bed-31ca3f18b002/Specimen_Clamp-.png",
+    "created_at": "2026-09-15T21:02:29.914367+00:00",
+    "sort_order": 131,
+    "updated_at": "2026-09-15T21:02:29.914367+00:00",
+    "category_id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": null
+  },
+  {
+    "id": "53aab938-0d92-40fe-8e8b-aafbd93c1b07",
+    "name": "Spectroelectrochemical Cell",
+    "slug": "spectroelectrochemical-cell",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/cefce430-c46f-4468-8318-bdc29f3a68e8/Spectroelectro_Chemical_Cell.png",
+    "created_at": "2026-09-15T21:02:29.914367+00:00",
+    "sort_order": 132,
+    "updated_at": "2026-09-15T21:02:29.914367+00:00",
+    "category_id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": null
+  },
+  {
+    "id": "a2813c1a-6e5d-4be1-90ee-2167ad1d60aa",
+    "name": "Spectroelectrochemistry Application Kit",
+    "slug": "spectroelectrochemistry-application-kit",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/f563a3b4-1ca7-4949-a3ba-d5327e3a685c/Spectroelectrochemistry_Application_Kit.png",
+    "created_at": "2026-09-15T21:02:29.914367+00:00",
+    "sort_order": 133,
+    "updated_at": "2026-09-15T21:02:29.914367+00:00",
+    "category_id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": null
+  },
+  {
+    "id": "70470462-1361-4bf8-a76c-a7007c7e34af",
+    "name": "Spectrometry Kit SK001",
+    "slug": "spectrometry-kit-sk001",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/72e5d0c2-4289-454f-8332-ae0aa9423ce3/spectrometry-kit-sk001-removebg-preview.png",
+    "created_at": "2026-09-15T21:02:29.914367+00:00",
+    "sort_order": 134,
+    "updated_at": "2026-09-15T21:02:29.914367+00:00",
+    "category_id": "7aa67e88-b065-4ff9-948c-8bd5e026cd4e",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": null
+  },
+  {
+    "id": "5fb5bede-b59a-4e6f-9b4c-da8c46f0828d",
+    "name": "Tablet Oscilloscope 50MHz",
+    "slug": "tablet-oscilloscope-50mhz",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/0e78eaca-89ea-4042-a1d0-2fd06f604c58/Tablet-Oscilloscope-50Mhz.png",
+    "created_at": "2026-09-15T21:02:29.914367+00:00",
+    "sort_order": 135,
+    "updated_at": "2026-09-15T21:02:29.914367+00:00",
+    "category_id": "d2a47c37-1d06-4802-a69d-d58a35aed521",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": null
+  },
+  {
+    "id": "786becf3-628e-4668-b26f-0b031b0ffda2",
+    "name": "Teflon Autoclave",
+    "slug": "teflon-autoclave",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/7f357f52-2bef-4cc4-af7e-4a42628419f1/Teflon-Autoclave.png",
+    "created_at": "2026-09-15T21:02:29.914367+00:00",
+    "sort_order": 136,
+    "updated_at": "2026-09-15T21:02:29.914367+00:00",
+    "category_id": "e83b2b4b-80e8-4cdc-84a0-6973c1da9c84",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": null
+  },
+  {
+    "id": "e1dfcacf-8f5c-4e4f-b56f-7ec93bebf2b9",
+    "name": "Visible Spectrophotometer Single Beam SP IV722G 721G 100 721G",
+    "slug": "visible-spectrophotometer-single-beam-sp-iv722g-721g",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/c103d196-8e73-46f9-9035-1fb43162af1a/Visible-Spectrophotometer-Single-Beam-SP-IV722G-721G-100-721G-removebg-preview.png",
+    "created_at": "2026-09-15T21:02:29.914367+00:00",
+    "sort_order": 137,
+    "updated_at": "2026-09-15T21:02:29.914367+00:00",
+    "category_id": "8e0e3a7d-2e5f-4603-9df2-faab3e84ad7e",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": null
+  },
+  {
+    "id": "feb233aa-d541-4663-805f-48a8a7700e4f",
+    "name": "Visible Spectrophotometer Single Beam SP MV5600 SP MV5800",
+    "slug": "visible-spectrophotometer-single-beam-sp-mv5600-mv5800",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/81ad3e05-1456-4fda-b3db-06fa81102fdf/Visible-Spectrophotometer-Single-Beam-SP-MV5600-SP-MV5800_2_-removebg-preview.png",
+    "created_at": "2026-09-15T21:02:29.914367+00:00",
+    "sort_order": 138,
+    "updated_at": "2026-09-15T21:02:29.914367+00:00",
+    "category_id": "8e0e3a7d-2e5f-4603-9df2-faab3e84ad7e",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": null
+  },
+  {
+    "id": "7c5736bf-c428-464f-9379-73f8e7844c13",
+    "name": "Zeeman Effect Apparatus",
+    "slug": "zeeman-effect-apparatus",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/c2f8cd55-e283-400a-b2a3-4da6f54e2f6e/zeeman-effect-removebg-preview.png",
+    "created_at": "2026-09-15T21:02:29.914367+00:00",
+    "sort_order": 139,
+    "updated_at": "2026-09-15T21:02:29.914367+00:00",
+    "category_id": "7aa67e88-b065-4ff9-948c-8bd5e026cd4e",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": null
+  },
+  {
+    "id": "65ae5803-48a0-4574-a105-5b545aef87f0",
+    "name": "Simple Cell Stand",
+    "slug": "simple-cell-stand",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/aa2759e0-ef96-49c1-abe2-7ce1073f23ef/Simple_Cell_Stand.png",
+    "created_at": "2026-09-15T21:05:34.056445+00:00",
+    "sort_order": 140,
+    "updated_at": "2026-09-15T21:05:34.056445+00:00",
+    "category_id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": null
+  },
+  {
+    "id": "c9fbcb21-c444-40f6-9d15-0fb6e3d5b5a3",
+    "name": "Small Ring Launcher",
+    "slug": "small-ring-launcher",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/ce546e7b-ec54-4b6e-b0b0-0c1e9fefd43c/small-ring-launcher-removebg-preview.png",
+    "created_at": "2026-09-15T21:05:34.056445+00:00",
+    "sort_order": 141,
+    "updated_at": "2026-09-15T21:05:34.056445+00:00",
+    "category_id": "7aa67e88-b065-4ff9-948c-8bd5e026cd4e",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": null
+  },
+  {
+    "id": "e2d2817f-ec27-4fd3-b13c-077fe591ff50",
+    "name": "Solar Cell Characteristics",
+    "slug": "solar-cell-characteristics",
+    "gallery": [],
+    "brand_id": null,
+    "image_url": "/__l5e/assets-v1/b4ee2ef1-0fb2-4800-9bde-df535286ec31/solar-cell-characteristics-removebg-preview.png",
+    "created_at": "2026-09-15T21:05:34.056445+00:00",
+    "sort_order": 142,
+    "updated_at": "2026-09-15T21:05:34.056445+00:00",
+    "category_id": "7aa67e88-b065-4ff9-948c-8bd5e026cd4e",
+    "description": null,
+    "is_featured": false,
+    "is_published": true,
+    "specifications": {
+      "rows": [],
+      "columns": []
+    },
+    "short_description": null
+  }
+]

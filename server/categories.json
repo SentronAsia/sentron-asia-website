@@ -1,0 +1,79 @@
+[
+  {
+    "id": "8e0e3a7d-2e5f-4603-9df2-faab3e84ad7e",
+    "name": "Analytical Instruments",
+    "slug": "analytical-instruments",
+    "image_url": null,
+    "created_at": "2026-09-15T20:12:02.536519+00:00",
+    "sort_order": 1,
+    "updated_at": "2026-09-15T20:12:02.536519+00:00",
+    "description": "Precision instrumentation for chemical and material analysis.",
+    "is_published": true
+  },
+  {
+    "id": "edb8f52d-3634-4a34-88ce-e7a3c589f24b",
+    "name": "Electrochemistry",
+    "slug": "electrochemistry",
+    "image_url": null,
+    "created_at": "2026-09-15T20:12:02.536519+00:00",
+    "sort_order": 2,
+    "updated_at": "2026-09-15T20:12:02.536519+00:00",
+    "description": "Potentiostats, sensors and electrochemical workstations.",
+    "is_published": true
+  },
+  {
+    "id": "e83b2b4b-80e8-4cdc-84a0-6973c1da9c84",
+    "name": "Laboratory Equipment",
+    "slug": "laboratory-equipment",
+    "image_url": null,
+    "created_at": "2026-09-15T20:12:02.536519+00:00",
+    "sort_order": 3,
+    "updated_at": "2026-09-15T20:12:02.536519+00:00",
+    "description": "Core bench equipment for research and quality control laboratories.",
+    "is_published": true
+  },
+  {
+    "id": "d13108a9-01b7-4990-a05b-f18c32739403",
+    "name": "Life Sciences",
+    "slug": "life-sciences",
+    "image_url": null,
+    "created_at": "2026-09-15T20:12:02.536519+00:00",
+    "sort_order": 4,
+    "updated_at": "2026-09-15T20:12:02.536519+00:00",
+    "description": "Instrumentation for biological, clinical and pharmaceutical research.",
+    "is_published": true
+  },
+  {
+    "id": "a6f7cb52-9d64-4192-b82d-62fa61dfebe8",
+    "name": "Environmental Monitoring",
+    "slug": "environmental-monitoring",
+    "image_url": null,
+    "created_at": "2026-09-15T20:12:02.536519+00:00",
+    "sort_order": 5,
+    "updated_at": "2026-09-15T20:12:02.536519+00:00",
+    "description": "Systems for water, air and soil quality measurement.",
+    "is_published": true
+  },
+  {
+    "id": "d2a47c37-1d06-4802-a69d-d58a35aed521",
+    "name": "Metrology & Calibration",
+    "slug": "metrology-calibration",
+    "image_url": null,
+    "created_at": "2026-09-15T20:12:02.536519+00:00",
+    "sort_order": 6,
+    "updated_at": "2026-09-15T20:12:02.536519+00:00",
+    "description": "Reference standards and calibration instrumentation.",
+    "is_published": true
+  },
+  {
+    "id": "7aa67e88-b065-4ff9-948c-8bd5e026cd4e",
+    "name": "Advanced Physics ",
+    "slug": "advanced-physics",
+    "image_url": null,
+    "created_at": "2026-09-15T20:24:33.354546+00:00",
+    "sort_order": 7,
+    "updated_at": "2026-09-15T22:10:50.990024+00:00",
+    "description": "Classical experiment apparatus for university physics laboratories — Franck-Hertz, Millikan, Planck's constant and more.",
+    "is_published": true
+  }
+]

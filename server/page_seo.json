@@ -1,0 +1,42 @@
+[
+  {
+    "id": "7c505d79-2a1e-4fca-934b-38a5bb1e481f",
+    "created_at": "2026-09-15T20:12:02.536519+00:00",
+    "updated_at": "2026-09-15T20:12:02.536519+00:00",
+    "page": "about",
+    "title": "About Us | Sentron Asia International",
+    "description": "Four decades of importing, supplying, installing and maintaining scientific equipment for laboratories across the region."
+  },
+  {
+    "id": "bce94f18-398e-47e8-b875-bdc2bb84b146",
+    "created_at": "2026-09-15T20:12:02.536519+00:00",
+    "updated_at": "2026-09-15T20:12:02.536519+00:00",
+    "page": "contact",
+    "title": "Contact | Sentron Asia International",
+    "description": "Contact Sentron Asia International in Saddar Lahore Cantt and Harbanspura for equipment enquiries and 24/7 technical support."
+  },
+  {
+    "id": "6b9999f5-2d8e-4fb8-97f8-09e5aea558f9",
+    "created_at": "2026-09-15T20:12:02.536519+00:00",
+    "updated_at": "2026-09-15T20:12:02.536519+00:00",
+    "page": "home",
+    "title": "Sentron Asia International | Scientific & Laboratory Equipment",
+    "description": "Sentron Asia International supplies, installs and maintains scientific and laboratory equipment across Pakistan, with 40+ years of experience."
+  },
+  {
+    "id": "7c06c772-56d1-413c-a594-dc7dc87f1394",
+    "created_at": "2026-09-15T20:12:02.536519+00:00",
+    "updated_at": "2026-09-15T20:12:02.536519+00:00",
+    "page": "innovations",
+    "title": "Innovations & Highlights | Sentron Asia International",
+    "description": "Discover the leading scientific instrumentation brands represented by Sentron Asia International."
+  },
+  {
+    "id": "b1d95d24-17e8-4b4e-bc5e-532c094a5df1",
+    "created_at": "2026-09-15T20:12:02.536519+00:00",
+    "updated_at": "2026-09-15T20:12:02.536519+00:00",
+    "page": "products",
+    "title": "Products & Categories | Sentron Asia International",
+    "description": "Explore our catalogue of analytical instruments, electrochemistry, laboratory and environmental monitoring equipment."
+  }
+]

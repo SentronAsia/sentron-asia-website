@@ -1,0 +1,82 @@
+[
+  {
+    "id": "f57c6f45-aca5-40f9-99e9-198db9a00f62",
+    "name": "PalmSens",
+    "logo_url": "/__l5e/assets-v1/ba277ec1-cdf1-4285-bba6-b4a9993872d0/partner-palmsens-transparent.png",
+    "is_active": true,
+    "created_at": "2026-09-15T21:11:58.593666+00:00",
+    "sort_order": 1,
+    "updated_at": "2026-09-15T21:11:58.593666+00:00",
+    "website_url": null
+  },
+  {
+    "id": "fe093a91-5124-4cd8-9f52-29c191b26cbb",
+    "name": "Lambda Scientific",
+    "logo_url": "/__l5e/assets-v1/a0d6f296-87f6-4527-aea5-877204d69c9a/partner-lambda-scientific.png",
+    "is_active": true,
+    "created_at": "2026-09-15T21:11:58.593666+00:00",
+    "sort_order": 2,
+    "updated_at": "2026-09-15T21:11:58.593666+00:00",
+    "website_url": null
+  },
+  {
+    "id": "be2466f3-01a8-4e83-ba66-4ef454ceedbc",
+    "name": "PHYWE",
+    "logo_url": "/__l5e/assets-v1/6675132b-cd82-4fc1-ace9-78eb09f9c07b/partner-phywe.png",
+    "is_active": true,
+    "created_at": "2026-09-15T21:11:58.593666+00:00",
+    "sort_order": 3,
+    "updated_at": "2026-09-15T21:11:58.593666+00:00",
+    "website_url": null
+  },
+  {
+    "id": "aa1c217f-165b-47c3-adb9-f43d41b3fa84",
+    "name": "3B Scientific",
+    "logo_url": "/__l5e/assets-v1/b522ebbb-1383-4a73-8cac-d6a30e08253c/partner-3b-scientific.png",
+    "is_active": true,
+    "created_at": "2026-09-15T21:11:58.593666+00:00",
+    "sort_order": 4,
+    "updated_at": "2026-09-15T21:11:58.593666+00:00",
+    "website_url": null
+  },
+  {
+    "id": "9a8fbfde-bcfd-491b-bae6-53479fef44f5",
+    "name": "Sargent Welch",
+    "logo_url": "/__l5e/assets-v1/f01f7b5d-9f15-4def-9082-d1b12d5b6ce2/partner-sargent-welch.png",
+    "is_active": true,
+    "created_at": "2026-09-15T21:11:58.593666+00:00",
+    "sort_order": 5,
+    "updated_at": "2026-09-15T21:11:58.593666+00:00",
+    "website_url": null
+  },
+  {
+    "id": "0dfcefbc-6c9d-431d-b285-5a62333f1699",
+    "name": "LabDex",
+    "logo_url": "/__l5e/assets-v1/7323b001-ae37-4b5e-b80a-fb1331e880e9/partner-labdex.png",
+    "is_active": true,
+    "created_at": "2026-09-15T21:11:58.593666+00:00",
+    "sort_order": 6,
+    "updated_at": "2026-09-15T21:11:58.593666+00:00",
+    "website_url": null
+  },
+  {
+    "id": "f45df481-d243-4d23-9418-4275245002cf",
+    "name": "MTI Corporation",
+    "logo_url": "/__l5e/assets-v1/f79a6ea3-4444-4478-8b6e-a3b31799b11f/partner-mti-corporation.png",
+    "is_active": true,
+    "created_at": "2026-09-15T21:11:58.593666+00:00",
+    "sort_order": 7,
+    "updated_at": "2026-09-15T21:11:58.593666+00:00",
+    "website_url": null
+  },
+  {
+    "id": "626b2f5b-c636-4ee4-a817-557bb9a3ee0f",
+    "name": "PLAB",
+    "logo_url": "/__l5e/assets-v1/6245ebcd-15e0-4b61-a63f-4cc5d4abfe93/partner-plab.png",
+    "is_active": true,
+    "created_at": "2026-09-15T21:11:58.593666+00:00",
+    "sort_order": 8,
+    "updated_at": "2026-09-15T21:11:58.593666+00:00",
+    "website_url": null
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "id": "a9042b41-4027-445f-bae0-b8044f82b6ee",
+    "name": "PalmSens",
+    "slug": "palmsens",
+    "tagline": "Portable electrochemical instrumentation",
+    "logo_url": null,
+    "created_at": "2026-09-15T20:12:02.536519+00:00",
+    "meta_title": null,
+    "sort_order": 1,
+    "updated_at": "2026-09-15T20:12:02.536519+00:00",
+    "description": "PalmSens develops compact, high-performance potentiostats and electrochemical interfaces used in research and field applications worldwide.",
+    "is_published": true,
+    "hero_image_url": null,
+    "is_highlighted": true,
+    "meta_description": null
+  },
+  {
+    "id": "f1ca1a36-be2a-4695-8600-f95d4c91cf72",
+    "name": "Sartorius",
+    "slug": "sartorius",
+    "tagline": "Weighing and bioprocessing excellence",
+    "logo_url": null,
+    "created_at": "2026-09-15T20:12:02.536519+00:00",
+    "meta_title": null,
+    "sort_order": 3,
+    "updated_at": "2026-09-15T20:12:02.536519+00:00",
+    "description": "Laboratory balances, filtration and bioprocess solutions engineered for reproducible results.",
+    "is_published": true,
+    "hero_image_url": null,
+    "is_highlighted": true,
+    "meta_description": null
+  }
+]
