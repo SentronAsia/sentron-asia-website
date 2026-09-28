@@ -27,24 +27,47 @@ const app = express();
 
 // ---- Middleware ----
 app.use(helmet({ crossOriginResourcePolicy: { policy: 'cross-origin' } }));
-const allowedOrigins = process.env.CORS_ORIGIN 
+
+// CORS: Parse comma-separated origins from env, fall back to localhost for dev.
+// When `withCredentials: true` is used on the client, the response MUST echo
+// back the exact requesting origin—wildcards are forbidden by the spec.
+const allowedOrigins = process.env.CORS_ORIGIN
   ? process.env.CORS_ORIGIN.split(',').map(url => url.trim())
   : ['http://localhost:5173'];
 
-app.use(cors({ 
+app.use(cors({
   origin: function (origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
+    // Allow requests with no origin (server-to-server, curl, health checks)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
+      console.warn(`CORS blocked origin: ${origin}. Allowed: ${allowedOrigins.join(', ')}`);
       callback(new Error('Not allowed by CORS'));
     }
-  }, 
-  credentials: true 
+  },
+  credentials: true,
 }));
+
 app.use(compression());
 app.use(morgan(process.env.NODE_ENV === 'production' ? 'combined' : 'dev'));
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true }));
+
+// ---- Serverless DB Connection Middleware ----
+// On Vercel serverless, there is no persistent process—each invocation may be
+// a cold start. We must ensure MongoDB is connected BEFORE any route handler
+// touches the database. This middleware lazily connects on the first request
+// and reuses the connection for the lifetime of the warm function instance.
+app.use(async (req, res, next) => {
+  try {
+    await connectDB();
+    next();
+  } catch (err) {
+    console.error('Database connection failed in middleware:', err.message);
+    res.status(503).json({ success: false, message: 'Database unavailable. Please try again shortly.' });
+  }
+});
 
 // ---- Health Check ----
 app.get('/api/health', (req, res) => {
@@ -83,19 +106,22 @@ app.use('/api/admin/database', databaseRoutes);
 app.use(notFound);
 app.use(errorHandler);
 
-// ---- Start Server ----
-const PORT = process.env.PORT || 5000;
-
-const startServer = async () => {
-  await connectDB();
-  app.listen(PORT, () => {
-    console.log(`✓ Server running on port ${PORT} in ${process.env.NODE_ENV || 'development'} mode`);
-  });
-};
-
-startServer().catch((err) => {
-  console.error('Failed to start server:', err);
-  process.exit(1);
-});
+// ---- Start Server (local dev only) ----
+// On Vercel, api/index.js imports this module and exports `app` directly—
+// Vercel's own HTTP layer handles listen(). We only call listen() when
+// running locally via `npm run dev` / `node server.js`.
+if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
+  const PORT = process.env.PORT || 5000;
+  connectDB()
+    .then(() => {
+      app.listen(PORT, () => {
+        console.log(`✓ Server running on port ${PORT} in ${process.env.NODE_ENV || 'development'} mode`);
+      });
+    })
+    .catch((err) => {
+      console.error('Failed to start server:', err);
+      process.exit(1);
+    });
+}
 
 export default app;

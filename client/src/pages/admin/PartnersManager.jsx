@@ -87,14 +87,13 @@ export default function PartnersManager() {
         });
       }
 
-      const config = {
-        headers: { 'Content-Type': 'multipart/form-data' }
-      };
+      // Axios interceptor auto-detects FormData and sets the correct
+      // multipart/form-data Content-Type with boundary — no manual override needed.
 
       if (editingItem) {
-        await api.put(`/admin/partners/${editingItem._id}`, formData, config);
+        await api.put(`/admin/partners/${editingItem._id}`, formData);
       } else {
-        await api.post('/admin/partners', formData, config);
+        await api.post('/admin/partners', formData);
       }
 
       closeModal();
