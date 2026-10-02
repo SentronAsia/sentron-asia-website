@@ -28,41 +28,39 @@ const app = express();
 // ---- Middleware ----
 app.use(helmet({ crossOriginResourcePolicy: { policy: 'cross-origin' } }));
 
-// CORS: Parse comma-separated origins from env, fall back to localhost for dev.
-const allowedOrigins = process.env.CORS_ORIGIN
-  ? process.env.CORS_ORIGIN.split(',').map(url => url.trim())
-  : ['http://localhost:5173'];
+// CORS: Hardcode the production frontend URL + parse extras from env.
+const PRODUCTION_ORIGIN = 'https://sentron-asia-client.vercel.app';
+const allowedOrigins = [
+  PRODUCTION_ORIGIN,
+  'http://localhost:5173',
+  ...(process.env.CORS_ORIGIN
+    ? process.env.CORS_ORIGIN.split(',').map(url => url.trim()).filter(Boolean)
+    : []),
+];
 
-// Explicit preflight handler — runs BEFORE cors() middleware.
-// Vercel serverless can swallow OPTIONS requests before Express processes them.
-// This guarantees the preflight response always has the correct headers.
-app.options('*', (req, res) => {
-  const origin = req.headers.origin;
-  if (origin && (allowedOrigins.includes(origin) || origin.endsWith('.vercel.app'))) {
-    res.setHeader('Access-Control-Allow-Origin', origin);
-  }
-  res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,PATCH,OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,Content-Type,Authorization,Accept');
-  res.setHeader('Access-Control-Allow-Credentials', 'true');
-  res.setHeader('Access-Control-Max-Age', '86400');
-  res.status(204).end();
-});
-
-app.use(cors({
+const corsOptions = {
   origin: function (origin, callback) {
     // Allow requests with no origin (server-to-server, curl, health checks)
     if (!origin) return callback(null, true);
-    // Exact match against CORS_ORIGIN list
+    // Exact match against allowed list
     if (allowedOrigins.includes(origin)) return callback(null, true);
-    // Also allow any *.vercel.app subdomain (covers preview deployments)
+    // Allow any *.vercel.app subdomain (preview deployments)
     if (origin.endsWith('.vercel.app')) return callback(null, true);
     console.warn(`CORS blocked origin: ${origin}. Allowed: ${allowedOrigins.join(', ')}`);
     callback(new Error('Not allowed by CORS'));
   },
   credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
-  allowedHeaders: ['X-Requested-With', 'Content-Type', 'Authorization', 'Accept'],
-}));
+  methods: ['GET', 'OPTIONS', 'PATCH', 'DELETE', 'POST', 'PUT'],
+  allowedHeaders: [
+    'X-CSRF-Token', 'X-Requested-With', 'Accept', 'Accept-Version',
+    'Content-Length', 'Content-MD5', 'Content-Type', 'Date',
+    'X-Api-Version', 'Authorization',
+  ],
+};
+
+// Explicit preflight — MUST come before app.use(cors())
+app.options('*', cors(corsOptions));
+app.use(cors(corsOptions));
 
 app.use(compression());
 app.use(morgan(process.env.NODE_ENV === 'production' ? 'combined' : 'dev'));
