@@ -69,9 +69,38 @@ app.use(async (req, res, next) => {
   }
 });
 
+// ---- Root Route ----
+app.get('/', (req, res) => {
+  res.json({ success: true, message: 'Sentron API is running live!' });
+});
+
 // ---- Health Check ----
-app.get('/api/health', (req, res) => {
-  res.json({ status: 'ok', timestamp: new Date().toISOString() });
+app.get('/api/health', async (req, res) => {
+  try {
+    const mongoose = (await import('mongoose')).default;
+    const conn = mongoose.connection;
+    const collections = conn.db ? await conn.db.listCollections().toArray() : [];
+    res.json({
+      status: 'ok',
+      timestamp: new Date().toISOString(),
+      database: {
+        name: conn.name || 'unknown',
+        host: conn.host || 'unknown',
+        readyState: conn.readyState,
+        collections: collections.map(c => c.name),
+      },
+      env: {
+        NODE_ENV: process.env.NODE_ENV || 'not set',
+        MONGODB_URI_SET: !!process.env.MONGODB_URI,
+        MONGODB_URI_DB: process.env.MONGODB_URI
+          ? process.env.MONGODB_URI.match(/\.net\/([^?]*)/)?.[1] || 'could not parse'
+          : 'not set',
+        CORS_ORIGIN: process.env.CORS_ORIGIN || 'not set',
+      },
+    });
+  } catch (err) {
+    res.json({ status: 'error', error: err.message, timestamp: new Date().toISOString() });
+  }
 });
 
 // ---- Public Routes ----
