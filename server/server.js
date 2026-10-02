@@ -28,28 +28,11 @@ const app = express();
 // ---- Middleware ----
 app.use(helmet({ crossOriginResourcePolicy: { policy: 'cross-origin' } }));
 
-// CORS: Hardcode the production frontend URL + parse extras from env.
-const PRODUCTION_ORIGIN = 'https://sentron-asia-client.vercel.app';
-const allowedOrigins = [
-  PRODUCTION_ORIGIN,
-  'http://localhost:5173',
-  ...(process.env.CORS_ORIGIN
-    ? process.env.CORS_ORIGIN.split(',').map(url => url.trim()).filter(Boolean)
-    : []),
-];
-
+// CORS: Allow all origins. Auth is via JWT Bearer tokens, not cookies,
+// so there is no security risk. This handles production, preview deploys,
+// and localhost without any origin-matching complexity.
 const corsOptions = {
-  origin: function (origin, callback) {
-    // Allow requests with no origin (server-to-server, curl, health checks)
-    if (!origin) return callback(null, true);
-    // Exact match against allowed list
-    if (allowedOrigins.includes(origin)) return callback(null, true);
-    // Allow any *.vercel.app subdomain (preview deployments)
-    if (origin.endsWith('.vercel.app')) return callback(null, true);
-    console.warn(`CORS blocked origin: ${origin}. Allowed: ${allowedOrigins.join(', ')}`);
-    callback(new Error('Not allowed by CORS'));
-  },
-  credentials: true,
+  origin: true,
   methods: ['GET', 'OPTIONS', 'PATCH', 'DELETE', 'POST', 'PUT'],
   allowedHeaders: [
     'X-CSRF-Token', 'X-Requested-With', 'Accept', 'Accept-Version',
