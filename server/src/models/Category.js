@@ -8,11 +8,10 @@ const categorySchema = new mongoose.Schema({
   order: { type: Number, default: 0 },
 }, { timestamps: true });
 
-categorySchema.pre('save', function (next) {
+categorySchema.pre('save', function () {
   if (!this.slug && this.name) {
     this.slug = this.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
   }
-  next();
 });
 
 export default mongoose.model('Category', categorySchema);

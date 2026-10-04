@@ -20,12 +20,11 @@ const settingsSchema = new mongoose.Schema({
 }, { timestamps: true });
 
 // Ensure only one settings document exists
-settingsSchema.pre('save', async function (next) {
+settingsSchema.pre('save', async function () {
   const count = await mongoose.model('Settings').countDocuments();
   if (count > 0 && this.isNew) {
-    return next(new Error('Only one Settings document can be created.'));
+    throw new Error('Only one Settings document can be created.');
   }
-  next();
 });
 
 export default mongoose.model('Settings', settingsSchema);

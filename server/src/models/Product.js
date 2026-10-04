@@ -14,11 +14,10 @@ const productSchema = new mongoose.Schema({
   isFeatured: { type: Boolean, default: false },
 }, { timestamps: true });
 
-productSchema.pre('save', function (next) {
+productSchema.pre('save', function () {
   if (!this.slug && this.name) {
     this.slug = this.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
   }
-  next();
 });
 
 // Virtual populate

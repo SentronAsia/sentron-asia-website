@@ -7,11 +7,10 @@ const brandSchema = new mongoose.Schema({
   description: { type: String, default: '' },
 }, { timestamps: true });
 
-brandSchema.pre('save', function (next) {
+brandSchema.pre('save', function () {
   if (!this.slug && this.name) {
     this.slug = this.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
   }
-  next();
 });
 
 export default mongoose.model('Brand', brandSchema);

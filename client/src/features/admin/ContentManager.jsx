@@ -97,7 +97,7 @@ export default function ContentManager({
     mutationFn: createFn,
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: [queryKey] });
-      closeModal();
+      forceCloseModal();
     },
   });
 
@@ -105,7 +105,7 @@ export default function ContentManager({
     mutationFn: ({ id, data }) => updateFn(id, data),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: [queryKey] });
-      closeModal();
+      forceCloseModal();
     },
   });
 
@@ -135,12 +135,16 @@ export default function ContentManager({
     setModalOpen(true);
   };
 
-  const closeModal = useCallback(() => {
-    if (dirty && !confirm('You have unsaved changes. Discard?')) return;
+  const forceCloseModal = useCallback(() => {
     setModalOpen(false);
     setEditingItem(null);
     setDirty(false);
-  }, [dirty]);
+  }, []);
+
+  const closeModal = useCallback(() => {
+    if (dirty && !confirm('You have unsaved changes. Discard?')) return;
+    forceCloseModal();
+  }, [dirty, forceCloseModal]);
 
   const handleChange = (key, value) => {
     setForm((prev) => ({ ...prev, [key]: value }));

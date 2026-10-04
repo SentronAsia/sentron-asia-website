@@ -8,13 +8,12 @@ const partnerSchema = new mongoose.Schema({
   order: { type: Number, default: 0 },
 }, { timestamps: true });
 
-partnerSchema.pre('save', function (next) {
+partnerSchema.pre('save', function () {
   if (this.logos && this.logos.length > 0 && !this.logo) {
     this.logo = this.logos[0];
   } else if (this.logo && (!this.logos || this.logos.length === 0)) {
     this.logos = [this.logo];
   }
-  next();
 });
 
 export default mongoose.model('Partner', partnerSchema);

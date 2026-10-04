@@ -108,7 +108,7 @@ export default function PartnersManager() {
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', padding: '1.5rem', width: '100%', minHeight: '100%' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', padding: '1.5rem', width: '100%', maxWidth: '100%', minHeight: '100%', overflow: 'hidden' }}>
       {/* HEADER SECTION */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <div>
@@ -123,7 +123,7 @@ export default function PartnersManager() {
       </div>
 
       {/* LIVE MARQUEE PREVIEW */}
-      <div className="glass-card-light" style={{ padding: '1.25rem', borderRadius: 'var(--radius-xl)' }}>
+      <div className="glass-card-light" style={{ padding: '1.25rem', borderRadius: 'var(--radius-xl)', overflow: 'hidden', maxWidth: '100%' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
           <span className="badge badge-accent">Live Homepage Marquee Preview</span>
           <span style={{ fontSize: '0.75rem', color: 'var(--color-text-muted)' }}>{allMarqueeLogos.length} logos looping</span>
@@ -146,11 +146,12 @@ export default function PartnersManager() {
       </div>
 
       {/* CUSTOM CRUD TABLE */}
-      <div className="glass-card-light" style={{ borderRadius: 'var(--radius-xl)', overflow: 'hidden' }}>
+      <div className="glass-card-light" style={{ borderRadius: 'var(--radius-xl)', overflow: 'hidden', maxWidth: '100%' }}>
         {isLoading ? (
           <div style={{ padding: '3rem', textAlign: 'center' }}>Loading partners...</div>
         ) : (
-          <table className="admin-table" style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left' }}>
+          <div style={{ overflowX: 'auto' }}>
+          <table className="admin-table" style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', tableLayout: 'fixed' }}>
             <thead>
               <tr style={{ borderBottom: '1px solid var(--color-border)', backgroundColor: 'var(--color-surface)' }}>
                 <th style={{ padding: '1rem', width: '100px' }}>Logos</th>
@@ -175,7 +176,7 @@ export default function PartnersManager() {
                       </div>
                     </td>
                     <td style={{ padding: '1rem', fontWeight: 500 }}>{partner.name}</td>
-                    <td style={{ padding: '1rem' }}>
+                    <td style={{ padding: '1rem', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                       {partner.url ? <a href={partner.url} target="_blank" rel="noreferrer" style={{ color: 'var(--color-primary)', textDecoration: 'none' }}>{partner.url}</a> : <span style={{ color: 'var(--color-text-muted)' }}>–</span>}
                     </td>
                     <td style={{ padding: '1rem' }}>{partner.order}</td>
@@ -200,6 +201,7 @@ export default function PartnersManager() {
               )}
             </tbody>
           </table>
+          </div>
         )}
       </div>
 
