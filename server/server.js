@@ -19,7 +19,6 @@ import mediaRoutes from './src/routes/mediaRoutes.js';
 import seoRoutes from './src/routes/seoRoutes.js';
 import contactRoutes from './src/routes/contactRoutes.js';
 import dashboardRoutes from './src/routes/dashboardRoutes.js';
-import uploadRoutes from './src/routes/uploadRoutes.js';
 import settingsRoutes from './src/routes/settingsRoutes.js';
 import databaseRoutes from './src/routes/databaseRoutes.js';
 
@@ -110,7 +109,6 @@ app.use('/api/documents', documentRoutes);
 app.use('/api/page-seo', seoRoutes);
 app.use('/api/contact', contactRoutes);
 app.use('/api/enquiry', contactRoutes);
-app.use('/api/upload', uploadRoutes);
 app.use('/api/settings', settingsRoutes);
 
 // ---- Admin Routes (reuse same routers; auth middleware applied inside) ----
@@ -123,7 +121,6 @@ app.use('/api/admin/documents', documentRoutes);
 app.use('/api/admin/media', mediaRoutes);
 app.use('/api/admin/page-seo', seoRoutes);
 app.use('/api/admin/dashboard', dashboardRoutes);
-app.use('/api/admin/upload', uploadRoutes);
 app.use('/api/admin/settings', settingsRoutes);
 app.use('/api/admin/database', databaseRoutes);
 

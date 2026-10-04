@@ -2,8 +2,7 @@ import { Router } from 'express';
 import Partner from '../models/Partner.js';
 import { authenticate, requireAdmin } from '../middleware/auth.js';
 import { partnerSchema } from '../validators/schemas.js';
-import { upload } from '../middleware/upload.js';
-import { uploadFile } from '../services/storageService.js';
+
 
 const router = Router();
 
@@ -14,7 +13,7 @@ router.get('/', async (req, res, next) => {
   } catch (error) { next(error); }
 });
 
-router.post('/', authenticate, requireAdmin, upload.array('logos', 20), async (req, res, next) => {
+router.post('/', authenticate, requireAdmin, async (req, res, next) => {
   try {
     let logos = [];
     if (req.body.logos) {
@@ -23,16 +22,7 @@ router.post('/', authenticate, requireAdmin, upload.array('logos', 20), async (r
       logos = [req.body.logo];
     }
 
-    if (req.files && req.files.length > 0) {
-      for (const file of req.files) {
-        const uploaded = await uploadFile(file.buffer, {
-          filename: file.originalname,
-          mimeType: file.mimetype,
-          folder: 'sentron-partners',
-        });
-        logos.push(uploaded.url);
-      }
-    }
+
 
     req.body.logos = logos;
     if (logos.length > 0 && !req.body.logo) {
@@ -45,7 +35,7 @@ router.post('/', authenticate, requireAdmin, upload.array('logos', 20), async (r
   } catch (error) { next(error); }
 });
 
-router.put('/:id', authenticate, requireAdmin, upload.array('logos', 20), async (req, res, next) => {
+router.put('/:id', authenticate, requireAdmin, async (req, res, next) => {
   try {
     let logos = [];
     if (req.body.logos) {
@@ -54,16 +44,7 @@ router.put('/:id', authenticate, requireAdmin, upload.array('logos', 20), async 
       logos = [req.body.logo];
     }
 
-    if (req.files && req.files.length > 0) {
-      for (const file of req.files) {
-        const uploaded = await uploadFile(file.buffer, {
-          filename: file.originalname,
-          mimeType: file.mimetype,
-          folder: 'sentron-partners',
-        });
-        logos.push(uploaded.url);
-      }
-    }
+
 
     if (logos.length > 0) {
       req.body.logos = logos;

@@ -1,7 +1,9 @@
+import { useQuery } from '@tanstack/react-query';
 import ContentManager from '../../features/admin/ContentManager.jsx';
 import {
   adminFetchStories, adminCreateStory,
   adminUpdateStory, adminDeleteStory,
+  adminFetchBrands,
 } from '../../api/services';
 
 const columns = [
@@ -16,19 +18,22 @@ const columns = [
   { key: 'sections', label: 'Sections', render: (item) => item.sections?.length || 0 },
 ];
 
-const formFields = [
-  { key: 'title', label: 'Story Title', required: true },
-  { key: 'brandId', label: 'Brand ID', required: true, placeholder: 'MongoDB ObjectId' },
-  { key: 'coverImage', label: 'Cover Image', type: 'image' },
-  { key: 'researcherName', label: 'Researcher Name' },
-  { key: 'institution', label: 'Institution' },
-  { key: 'studyTitle', label: 'Study Title' },
-  { key: 'applicationField', label: 'Application Field' },
-  { key: 'abstract', label: 'Abstract', type: 'textarea' },
-  { key: 'imageUrl', label: 'Research Image URL', type: 'image' },
-];
-
 export default function StoriesManager() {
+  const { data: brandsData } = useQuery({ queryKey: ['admin-brands'], queryFn: adminFetchBrands });
+  const brandOptions = brandsData?.data?.map(b => ({ value: b._id, label: b.name })) || [];
+
+  const formFields = [
+    { key: 'title', label: 'Story Title', required: true },
+    { key: 'brandId', label: 'Brand', type: 'select', required: true, options: brandOptions },
+    { key: 'coverImage', label: 'Cover Image', type: 'image' },
+    { key: 'researcherName', label: 'Researcher Name' },
+    { key: 'institution', label: 'Institution' },
+    { key: 'studyTitle', label: 'Study Title' },
+    { key: 'applicationField', label: 'Application Field' },
+    { key: 'abstract', label: 'Abstract', type: 'textarea' },
+    { key: 'imageUrl', label: 'Research Image URL', type: 'image' },
+  ];
+
   return (
     <ContentManager
       title="Showcase Stories"

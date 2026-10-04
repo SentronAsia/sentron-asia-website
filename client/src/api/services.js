@@ -1,4 +1,22 @@
 import api from './axios';
+import axios from 'axios';
+
+export const uploadToCloudinary = async (file, onProgress) => {
+  const cloudName = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
+  const uploadPreset = import.meta.env.VITE_CLOUDINARY_PRESET;
+  const url = `https://api.cloudinary.com/v1_1/${cloudName}/auto/upload`;
+
+  const formData = new FormData();
+  formData.append('file', file);
+  formData.append('upload_preset', uploadPreset);
+
+  const res = await axios.post(url, formData, {
+    headers: { 'Content-Type': 'multipart/form-data' },
+    onUploadProgress: onProgress
+  });
+  return res.data;
+};
+
 
 /* ============================
    PUBLIC API SERVICES
@@ -76,18 +94,8 @@ export const adminDeletePartner = (id) => api.delete(`/admin/partners/${id}`).th
 
 // Admin CRUD — Documents
 export const adminFetchDocuments = () => api.get('/admin/documents').then(r => r.data);
-export const adminCreateDocument = (data) => {
-  const isFormData = data instanceof FormData;
-  return api.post('/admin/documents', data, {
-    headers: isFormData ? { 'Content-Type': 'multipart/form-data' } : {},
-  }).then(r => r.data);
-};
-export const adminUpdateDocument = (id, data) => {
-  const isFormData = data instanceof FormData;
-  return api.put(`/admin/documents/${id}`, data, {
-    headers: isFormData ? { 'Content-Type': 'multipart/form-data' } : {},
-  }).then(r => r.data);
-};
+export const adminCreateDocument = (data) => api.post('/admin/documents', data).then(r => r.data);
+export const adminUpdateDocument = (id, data) => api.put(`/admin/documents/${id}`, data).then(r => r.data);
 export const adminDeleteDocument = (id) => api.delete(`/admin/documents/${id}`).then(r => r.data);
 
 // Admin — Page SEO
@@ -96,21 +104,39 @@ export const adminUpdatePageSeo = (page, data) => api.put(`/admin/page-seo/${pag
 
 // Admin — Media Library & File Uploads
 export const adminFetchMedia = (params) => api.get('/admin/media', { params }).then(r => r.data);
-export const adminUploadMedia = (formData, onProgress) =>
-  api.post('/upload', formData, {
-    headers: { 'Content-Type': 'multipart/form-data' },
-    onUploadProgress: onProgress,
-  }).then(r => r.data);
-export const uploadSingleFile = (formData, onProgress) =>
-  api.post('/upload', formData, {
-    headers: { 'Content-Type': 'multipart/form-data' },
-    onUploadProgress: onProgress,
-  }).then(r => r.data);
-export const uploadMultipleFiles = (formData, onProgress) =>
-  api.post('/upload', formData, {
-    headers: { 'Content-Type': 'multipart/form-data' },
-    onUploadProgress: onProgress,
-  }).then(r => r.data);
+export const adminUploadMedia = async (formData, onProgress) => {
+  const filesList = formData.getAll('files');
+  const files = [];
+  for (const file of filesList) {
+    const uploaded = await uploadToCloudinary(file);
+    files.push({
+      url: uploaded.secure_url,
+      filename: file.name,
+      publicId: uploaded.public_id,
+      size: uploaded.bytes,
+      mimeType: file.type || `${uploaded.resource_type}/${uploaded.format}`
+    });
+  }
+  if (onProgress) onProgress({ lengthComputable: true, loaded: 1, total: 1 });
+  return api.post('/admin/media/upload', { files }).then(r => r.data);
+};
+
+export const uploadSingleFile = async (formData, onProgress) => {
+  const file = formData.get('file');
+  const uploaded = await uploadToCloudinary(file, onProgress);
+  return { url: uploaded.secure_url, data: { url: uploaded.secure_url } };
+};
+
+export const uploadMultipleFiles = async (formData, onProgress) => {
+  const filesList = formData.getAll('files');
+  const urls = [];
+  for (const file of filesList) {
+    const uploaded = await uploadToCloudinary(file);
+    urls.push(uploaded.secure_url);
+  }
+  if (onProgress) onProgress({ lengthComputable: true, loaded: 1, total: 1 });
+  return { urls };
+};
 export const adminUpdateMedia = (id, data) => api.put(`/admin/media/${id}`, data).then(r => r.data);
 export const adminDeleteMedia = (id) => api.delete(`/admin/media/${id}`).then(r => r.data);
 

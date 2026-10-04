@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import api from '../../api/axios';
 import Marquee from '../../components/shared/Marquee.jsx';
+import { uploadToCloudinary } from '../../api/services';
 import { HiPlus, HiPencilSquare, HiTrash, HiXMark } from 'react-icons/hi2';
 
 export default function PartnersManager() {
@@ -75,25 +76,25 @@ export default function PartnersManager() {
     setIsSubmitting(true);
 
     try {
-      const formData = new FormData();
-      formData.append('name', name);
-      if (websiteUrl) formData.append('url', websiteUrl);
-      if (order !== '') formData.append('order', order);
-      
-      // Append native files
+      const uploadedLogos = [];
       if (fileInputRef.current && fileInputRef.current.files) {
-        Array.from(fileInputRef.current.files).forEach((file) => {
-          formData.append('logos', file);
-        });
+        for (const file of Array.from(fileInputRef.current.files)) {
+          const res = await uploadToCloudinary(file);
+          uploadedLogos.push(res.secure_url);
+        }
       }
 
-      // Axios interceptor auto-detects FormData and sets the correct
-      // multipart/form-data Content-Type with boundary — no manual override needed.
+      const payload = {
+        name,
+      };
+      if (websiteUrl) payload.url = websiteUrl;
+      if (order !== '') payload.order = order;
+      if (uploadedLogos.length > 0) payload.logos = uploadedLogos;
 
       if (editingItem) {
-        await api.put(`/admin/partners/${editingItem._id}`, formData);
+        await api.put(`/admin/partners/${editingItem._id}`, payload);
       } else {
-        await api.post('/admin/partners', formData);
+        await api.post('/admin/partners', payload);
       }
 
       closeModal();

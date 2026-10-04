@@ -17,6 +17,7 @@ import {
   adminCreateDocument,
   adminDeleteDocument,
   getDocumentDownloadUrl,
+  uploadToCloudinary,
 } from '../../api/services';
 
 // Helper to format bytes to human readable string
@@ -140,7 +141,19 @@ export default function DocumentsManager() {
 
   // Mutations
   const createMutation = useMutation({
-    mutationFn: (formData) => adminCreateDocument(formData),
+    mutationFn: async (fileData) => {
+      const uploaded = await uploadToCloudinary(fileData.file);
+      const payload = {
+        name: fileData.name,
+        fileUrl: uploaded.secure_url,
+        fileKey: uploaded.secure_url,
+        fileType: fileData.detectedType,
+        type: fileData.detectedType,
+        size: fileData.detectedSize,
+        fileSize: fileData.detectedSize,
+      };
+      return adminCreateDocument(payload);
+    },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['admin-documents'] });
       closeModal();
@@ -170,15 +183,12 @@ export default function DocumentsManager() {
       return;
     }
 
-    const formData = new FormData();
-    formData.append('document', selectedFile);
-    formData.append('name', name.trim());
-    formData.append('fileType', detectedType);
-    formData.append('type', detectedType);
-    formData.append('size', detectedSize);
-    formData.append('fileSize', detectedSize);
-
-    createMutation.mutate(formData);
+    createMutation.mutate({
+      file: selectedFile,
+      name: name.trim(),
+      detectedType,
+      detectedSize,
+    });
   };
 
   const handleDownload = async (doc) => {

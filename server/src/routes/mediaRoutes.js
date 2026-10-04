@@ -3,8 +3,7 @@ import MediaLibrary from '../models/MediaLibrary.js';
 import { authenticate, requireAdmin } from '../middleware/auth.js';
 import { validate } from '../middleware/validate.js';
 import { mediaUpdateSchema } from '../validators/schemas.js';
-import { upload } from '../middleware/upload.js';
-import { uploadFile, deleteFile } from '../services/storageService.js';
+
 
 const router = Router();
 
@@ -25,26 +24,21 @@ router.get('/', authenticate, requireAdmin, async (req, res, next) => {
 });
 
 // POST /upload — Admin: upload files (max 10)
-router.post('/upload', authenticate, requireAdmin, upload.array('files', 10), async (req, res, next) => {
+router.post('/upload', authenticate, requireAdmin, async (req, res, next) => {
   try {
-    if (!req.files || req.files.length === 0) {
+    const files = req.body.files;
+    if (!files || files.length === 0) {
       return res.status(400).json({ success: false, message: 'No files provided.' });
     }
 
     const results = [];
-    for (const file of req.files) {
-      const uploaded = await uploadFile(file.buffer, {
-        filename: file.originalname,
-        mimeType: file.mimetype,
-        folder: 'sentron-media',
-      });
-
+    for (const file of files) {
       const media = await MediaLibrary.create({
-        filename: file.originalname,
-        url: uploaded.url,
-        publicId: uploaded.publicId || uploaded.key,
-        size: file.size,
-        mimeType: file.mimetype,
+        filename: file.filename || file.originalname || 'uploaded_file',
+        url: file.url,
+        publicId: file.publicId || file.url,
+        size: file.size || 0,
+        mimeType: file.mimeType || file.mimetype || 'application/octet-stream',
       });
 
       results.push(media);
@@ -69,12 +63,6 @@ router.delete('/:id', authenticate, requireAdmin, async (req, res, next) => {
     const media = await MediaLibrary.findById(req.params.id);
     if (!media) return res.status(404).json({ success: false, message: 'Media not found.' });
 
-    // Delete from cloud storage
-    try {
-      await deleteFile(media.publicId);
-    } catch (cloudErr) {
-      console.error('Cloud delete failed (proceeding with DB delete):', cloudErr.message);
-    }
 
     await MediaLibrary.findByIdAndDelete(req.params.id);
     res.json({ success: true, message: 'Media deleted.' });
