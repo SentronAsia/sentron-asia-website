@@ -42,7 +42,7 @@ const corsOptions = {
 };
 
 // Explicit preflight — MUST come before app.use(cors())
-app.options('*', cors(corsOptions));
+app.options(/.*/, cors(corsOptions));
 app.use(cors(corsOptions));
 
 app.use(compression());
