@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { HiPlus, HiPencilSquare, HiTrash, HiXMark, HiMagnifyingGlass, HiEllipsisVertical, HiChevronLeft, HiChevronRight } from 'react-icons/hi2';
+import { HiPlus, HiPencilSquare, HiTrash, HiXMark, HiMagnifyingGlass, HiEllipsisVertical, HiChevronLeft, HiChevronRight, HiArrowsUpDown } from 'react-icons/hi2';
 import ImageUploadField from '../../components/admin/ImageUploadField.jsx';
 import MultiImageUploadField from '../../components/admin/MultiImageUploadField.jsx';
 
@@ -43,6 +43,7 @@ export default function ContentManager({
   getItemId = (item) => item._id,
   defaultForm = {},
   renderForm, // Add renderForm prop
+  sortField = 'name',
 }) {
   const queryClient = useQueryClient();
   const [modalOpen, setModalOpen] = useState(false);
@@ -52,6 +53,7 @@ export default function ContentManager({
   const [dirty, setDirty] = useState(false);
 
   const [search, setSearch] = useState('');
+  const [sortBy, setSortBy] = useState('newest');
   const [page, setPage] = useState(1);
   const limit = 10;
 
@@ -62,14 +64,46 @@ export default function ContentManager({
 
   const filteredData = useMemo(() => {
     if (!data?.data) return [];
-    if (!search) return data.data;
-    const lowerSearch = search.toLowerCase();
-    return data.data.filter(item => 
-      Object.values(item).some(val => 
-        String(val).toLowerCase().includes(lowerSearch)
-      )
-    );
-  }, [data, search]);
+    let list = data.data;
+
+    if (search) {
+      const lowerSearch = search.toLowerCase();
+      list = list.filter(item => 
+        Object.values(item).some(val => 
+          String(val).toLowerCase().includes(lowerSearch)
+        )
+      );
+    }
+
+    const getDate = (item, field) => {
+      if (item[field]) return new Date(item[field]).getTime();
+      if (item._id && typeof item._id === 'string' && item._id.length === 24) {
+        return parseInt(item._id.substring(0, 8), 16) * 1000;
+      }
+      return 0;
+    };
+
+    return [...list].sort((a, b) => {
+      if (sortBy === 'az') {
+        const nameA = String(a[sortField] || a.name || a.title || '').trim();
+        const nameB = String(b[sortField] || b.name || b.title || '').trim();
+        return nameA.localeCompare(nameB, undefined, { sensitivity: 'base' });
+      }
+      if (sortBy === 'za') {
+        const nameA = String(a[sortField] || a.name || a.title || '').trim();
+        const nameB = String(b[sortField] || b.name || b.title || '').trim();
+        return nameB.localeCompare(nameA, undefined, { sensitivity: 'base' });
+      }
+      if (sortBy === 'oldest') {
+        return getDate(a, 'createdAt') - getDate(b, 'createdAt');
+      }
+      if (sortBy === 'updated') {
+        return getDate(b, 'updatedAt') - getDate(a, 'updatedAt');
+      }
+      // 'newest' (default)
+      return getDate(b, 'createdAt') - getDate(a, 'createdAt');
+    });
+  }, [data, search, sortBy, sortField]);
 
   const totalPages = Math.ceil(filteredData.length / limit);
   const paginatedData = useMemo(() => {
@@ -79,7 +113,7 @@ export default function ContentManager({
 
   useEffect(() => {
     setPage(1);
-  }, [search]);
+  }, [search, sortBy]);
 
   // Unsaved changes warning
   useEffect(() => {
@@ -167,8 +201,8 @@ export default function ContentManager({
       <div className="admin-page-header" style={{ flexWrap: 'wrap', gap: '1rem' }}>
         <h1 style={{ fontSize: '1.5rem', margin: 0 }}>{title}</h1>
         
-        <div style={{ display: 'flex', gap: '1rem', alignItems: 'center', flex: 1, justifyContent: 'flex-end' }}>
-          <div style={{ position: 'relative', maxWidth: '300px', width: '100%' }}>
+        <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center', flexWrap: 'wrap', flex: 1, justifyContent: 'flex-end' }}>
+          <div style={{ position: 'relative', minWidth: '180px', maxWidth: '280px', flex: 1 }}>
             <HiMagnifyingGlass style={{ position: 'absolute', left: '0.75rem', top: '50%', transform: 'translateY(-50%)', color: 'var(--color-text-muted)' }} />
             <input
               type="text"
@@ -179,7 +213,25 @@ export default function ContentManager({
               onChange={(e) => setSearch(e.target.value)}
             />
           </div>
-          <button className="btn btn-primary btn-sm" onClick={openCreateModal}>
+
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
+            <HiArrowsUpDown style={{ position: 'absolute', left: '0.75rem', color: 'var(--color-text-muted)', pointerEvents: 'none' }} />
+            <select
+              className="form-input"
+              style={{ paddingLeft: '2.25rem', paddingRight: '2rem', cursor: 'pointer', appearance: 'auto', minWidth: '175px' }}
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value)}
+              aria-label="Sort records"
+            >
+              <option value="newest">Newest First</option>
+              <option value="oldest">Oldest First</option>
+              <option value="updated">Recently Modified</option>
+              <option value="az">Alphabetical (A – Z)</option>
+              <option value="za">Alphabetical (Z – A)</option>
+            </select>
+          </div>
+
+          <button className="btn btn-primary btn-sm" onClick={openCreateModal} style={{ whiteSpace: 'nowrap' }}>
             <HiPlus /> Add New
           </button>
         </div>
