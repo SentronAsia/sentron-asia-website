@@ -48,7 +48,7 @@
 
 .glass-card-light-hover:hover {
   transform: translateY(-3px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-lg), 0 0 20px var(--color-glow-accent);
   border-color: oklch(0.66 0.117 203 / 0.35);
 }
 
@@ -59,7 +59,7 @@
 }
 
 [data-theme="dark"] .glass-card-light-hover:hover {
-  box-shadow: var(--shadow-xl);
+  box-shadow: var(--shadow-xl), 0 0 20px var(--color-glow-accent);
   border-color: oklch(0.68 0.14 160 / 0.4);
 }
 

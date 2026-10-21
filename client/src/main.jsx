@@ -7,6 +7,8 @@ import { AuthProvider } from './context/AuthContext.jsx';
 import App from './App.jsx';
 import './styles/index.css';
 import './styles/glass.css';
+import './styles/effects.css';
+import 'lenis/dist/lenis.css';
 
 const queryClient = new QueryClient({
   defaultOptions: {

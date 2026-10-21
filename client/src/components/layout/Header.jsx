@@ -87,7 +87,7 @@ export default function Header() {
                   <HiChevronDown className={`nav-dropdown-icon ${dropdownOpen ? 'nav-dropdown-icon--open' : ''}`} />
                 </NavLink>
                 {dropdownOpen && (
-                  <div className="nav-dropdown glass-card-light">
+                  <div className="nav-dropdown glass-card-light" data-lenis-prevent>
                     <Link to="/innovations" className="nav-dropdown-item" onClick={() => setDropdownOpen(false)}>
                       All Brands
                     </Link>
@@ -135,7 +135,7 @@ export default function Header() {
 
       {/* Mobile Navigation Overlay */}
       {mobileOpen && (
-        <div className="mobile-nav-overlay" onClick={() => setMobileOpen(false)}>
+        <div className="mobile-nav-overlay" onClick={() => setMobileOpen(false)} data-lenis-prevent>
           <nav
             className="mobile-nav glass-panel-light"
             onClick={(e) => e.stopPropagation()}

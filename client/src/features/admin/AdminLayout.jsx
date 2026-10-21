@@ -45,7 +45,7 @@ export default function AdminLayout() {
 
       <div className="admin-layout">
         {/* Sidebar */}
-        <aside className={`admin-sidebar ${sidebarOpen ? 'admin-sidebar--open' : ''}`}>
+        <aside className={`admin-sidebar ${sidebarOpen ? 'admin-sidebar--open' : ''}`} data-lenis-prevent>
           <div className="admin-sidebar-header">
             <span className="admin-sidebar-title">
               <span style={{ color: 'var(--color-primary)', fontWeight: 700 }}>Sentron</span> CMS
@@ -81,7 +81,7 @@ export default function AdminLayout() {
 
         {/* Sidebar Backdrop (mobile) */}
         {sidebarOpen && (
-          <div className="admin-sidebar-backdrop" onClick={() => setSidebarOpen(false)} />
+          <div className="admin-sidebar-backdrop" onClick={() => setSidebarOpen(false)} data-lenis-prevent />
         )}
 
         {/* Main Content */}

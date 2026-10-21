@@ -27,6 +27,8 @@
 
 .site-header--scrolled {
   box-shadow: var(--shadow-md);
+  backdrop-filter: blur(24px) saturate(1.5);
+  -webkit-backdrop-filter: blur(24px) saturate(1.5);
 }
 
 .header-inner {
@@ -78,9 +80,28 @@
   background-color: var(--color-surface);
 }
 
+/* Animated underline for active nav links */
 .nav-link--active {
   color: var(--color-primary);
   font-weight: 500;
+  position: relative;
+}
+
+.nav-link--active::after {
+  content: '';
+  position: absolute;
+  bottom: 0.25rem;
+  left: 0.875rem;
+  right: 0.875rem;
+  height: 2px;
+  background: var(--color-primary);
+  border-radius: 1px;
+  animation: nav-underline-enter 300ms ease forwards;
+}
+
+@keyframes nav-underline-enter {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
 }
 
 /* Nav Dropdown */
@@ -310,8 +331,27 @@
 
 .footer-divider {
   height: 1px;
-  background: var(--color-border);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-border-strong) 20%,
+    var(--color-accent) 50%,
+    var(--color-border-strong) 80%,
+    transparent
+  );
+  border: none;
   margin-block: 2rem;
+}
+
+[data-theme="dark"] .footer-divider {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-border-strong) 20%,
+    var(--color-accent-dark) 50%,
+    var(--color-border-strong) 80%,
+    transparent
+  );
 }
 
 .footer-bottom {

@@ -1,63 +1,73 @@
 import { useEffect, useRef } from 'react';
+import { gsap } from '../../animations/gsapConfig.js';
+import useReducedMotion from '../../hooks/useReducedMotion.js';
 
 /**
- * ScrollReveal — Wraps children in an element that fades/slides in
- * when it enters the viewport via IntersectionObserver.
+ * ScrollReveal — Same external API as before, upgraded to GSAP internals.
  *
- * Uses CSS scroll-driven animations as progressive enhancement
- * where supported, with IntersectionObserver fallback.
+ * Props (unchanged):
+ *   children, className, threshold, delay, direction
+ *
+ * Behaviour:
+ * - If JS/animation fails → content is visible immediately (no opacity:0 on no-JS)
+ * - Respects prefers-reduced-motion
+ * - Uses GSAP ScrollTrigger (registered in gsapConfig.js)
+ * - direction: 'up' | 'down' | 'left' | 'right' | 'none'
  */
 export default function ScrollReveal({
   children,
   className = '',
-  threshold = 0.15,
+  threshold = 0.15,   // kept for API compat; maps to start offset
   delay = 0,
-  direction = 'up', // 'up' | 'down' | 'left' | 'right' | 'none'
+  direction = 'up',
 }) {
   const ref = useRef(null);
+  const prefersReduced = useReducedMotion();
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
 
-    // Respect prefers-reduced-motion
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    // Immediately visible for reduced motion or if GSAP unavailable
     if (prefersReduced) {
-      el.classList.add('scroll-reveal--visible');
+      gsap.set(el, { opacity: 1, x: 0, y: 0 });
       return;
     }
 
-    // Check for native CSS scroll-driven animation support
-    const hasNativeSupport = CSS.supports?.('(animation-timeline: view()) and (animation-range: entry)');
+    // Direction → initial transform
+    const fromVars = { opacity: 0, duration: 0.75, ease: 'power2.out', delay: delay / 1000 };
+    if (direction === 'up')    fromVars.y = 28;
+    if (direction === 'down')  fromVars.y = -28;
+    if (direction === 'left')  fromVars.x = -28;
+    if (direction === 'right') fromVars.x = 28;
+    // 'none' → opacity only
 
-    if (hasNativeSupport) {
-      // Let CSS handle it — just add the native class
-      el.classList.add('scroll-reveal--native');
-      return;
-    }
+    // Map threshold (0–1) to a ScrollTrigger start offset
+    const startOffset = Math.round((1 - threshold) * 80); // e.g. 0.15 → "80% bottom"
 
-    // IntersectionObserver fallback
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          el.classList.add('scroll-reveal--visible');
-          observer.unobserve(el);
-        }
+    const tween = gsap.from(el, {
+      ...fromVars,
+      scrollTrigger: {
+        trigger: el,
+        start: `top ${startOffset + 20}%`,
+        toggleActions: 'play none none none',
+        once: true,
       },
-      { threshold, rootMargin: '0px 0px -40px 0px' }
-    );
+    });
 
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, [threshold]);
-
-  const directionClass = direction !== 'none' ? `scroll-reveal--${direction}` : '';
+    return () => {
+      tween.scrollTrigger?.kill();
+      tween.kill();
+    };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [direction, delay, prefersReduced]);
 
   return (
     <div
       ref={ref}
-      className={`scroll-reveal ${directionClass} ${className}`}
-      style={delay ? { transitionDelay: `${delay}ms`, animationDelay: `${delay}ms` } : undefined}
+      className={className}
+      // Ensure content is always visible at CSS level — JS sets opacity via GSAP
+      style={{ opacity: prefersReduced ? 1 : undefined }}
     >
       {children}
     </div>

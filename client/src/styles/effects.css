@@ -1,0 +1,231 @@
+/* ============================================================
+   EFFECTS — Glows, gradients, micro-interactions, tilt prep
+   All tokens have BOTH light and dark values.
+   ============================================================ */
+
+/* ---- Glow & Gradient Tokens (Light Mode) ---- */
+:root {
+  --color-glow-primary: oklch(0.38 0.072 208 / 0.12);
+  --color-glow-accent: oklch(0.66 0.117 203 / 0.15);
+  --color-glow-mint: oklch(0.82 0.08 165 / 0.12);
+  --color-gradient-hero-start: oklch(0.30 0.06 210 / 0.85);
+  --color-gradient-hero-end: oklch(0.22 0.04 230 / 0.90);
+  --color-gradient-subtle: oklch(0.66 0.117 203 / 0.04);
+  --color-gradient-card: oklch(0.38 0.072 208 / 0.03);
+  --color-shimmer: oklch(1 0 0 / 0.06);
+  --color-cursor-fill: oklch(0.66 0.117 203 / 0.15);
+  --color-cursor-border: oklch(0.66 0.117 203 / 0.4);
+}
+
+/* ---- Glow & Gradient Tokens (Dark Mode) ---- */
+[data-theme="dark"] {
+  --color-glow-primary: oklch(0.72 0.12 195 / 0.15);
+  --color-glow-accent: oklch(0.68 0.14 160 / 0.18);
+  --color-glow-mint: oklch(0.75 0.10 165 / 0.15);
+  --color-gradient-hero-start: oklch(0.12 0.04 210 / 0.92);
+  --color-gradient-hero-end: oklch(0.08 0.03 230 / 0.95);
+  --color-gradient-subtle: oklch(0.68 0.14 160 / 0.06);
+  --color-gradient-card: oklch(0.72 0.12 195 / 0.04);
+  --color-shimmer: oklch(1 0 0 / 0.03);
+  --color-cursor-fill: oklch(0.68 0.14 160 / 0.12);
+  --color-cursor-border: oklch(0.68 0.14 160 / 0.35);
+}
+
+/* ---- Animated Underline for Links ---- */
+.animated-underline {
+  position: relative;
+  text-decoration: none;
+}
+
+.animated-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-accent);
+  transition: width 300ms ease;
+  border-radius: 1px;
+}
+
+.animated-underline:hover::after {
+  width: 100%;
+}
+
+/* ---- Glow Effect Utility ---- */
+.glow-accent {
+  box-shadow:
+    0 0 20px var(--color-glow-accent),
+    0 0 60px oklch(0.66 0.117 203 / 0.05);
+}
+
+[data-theme="dark"] .glow-accent {
+  box-shadow:
+    0 0 20px var(--color-glow-accent),
+    0 0 60px oklch(0.68 0.14 160 / 0.08);
+}
+
+.glow-primary {
+  box-shadow:
+    0 0 15px var(--color-glow-primary),
+    0 0 40px oklch(0.38 0.072 208 / 0.04);
+}
+
+[data-theme="dark"] .glow-primary {
+  box-shadow:
+    0 0 15px var(--color-glow-primary),
+    0 0 40px oklch(0.72 0.12 195 / 0.06);
+}
+
+/* ---- Subtle Gradient Background Utility ---- */
+.gradient-subtle-bg {
+  background:
+    radial-gradient(ellipse 60% 50% at 20% 50%, var(--color-glow-primary), transparent),
+    radial-gradient(ellipse 50% 50% at 80% 20%, var(--color-glow-accent), transparent),
+    var(--color-bg);
+}
+
+/* ---- Tilt Card Preparation ---- */
+.tilt-card {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 400ms ease;
+  will-change: transform;
+}
+
+.tilt-card-inner {
+  transform-style: preserve-3d;
+  transition: transform 400ms ease;
+}
+
+/* Glare overlay for tilt cards */
+.tilt-card-glare {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(
+    135deg,
+    oklch(1 0 0 / 0.15) 0%,
+    transparent 50%,
+    transparent 100%
+  );
+  transition: opacity 400ms ease;
+  z-index: 1;
+}
+
+[data-theme="dark"] .tilt-card-glare {
+  background: linear-gradient(
+    135deg,
+    oklch(1 0 0 / 0.08) 0%,
+    transparent 50%,
+    transparent 100%
+  );
+}
+
+.tilt-card:hover .tilt-card-glare {
+  opacity: 1;
+}
+
+/* ---- Shimmer Loading Skeleton ---- */
+.skeleton {
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--color-shimmer) 50%,
+    transparent 100%
+  );
+  animation: skeleton-shimmer 1.5s ease-in-out infinite;
+}
+
+@keyframes skeleton-shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* ---- Magnetic Button Effect Prep ---- */
+.btn-magnetic {
+  transition: transform 200ms ease;
+}
+
+/* ---- Smooth Focus Ring with Glow ---- */
+.focus-glow:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px var(--color-glow-accent);
+}
+
+/* ---- Gradient Divider ---- */
+.gradient-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-border-strong) 20%,
+    var(--color-accent) 50%,
+    var(--color-border-strong) 80%,
+    transparent
+  );
+  border: none;
+}
+
+[data-theme="dark"] .gradient-divider {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-border-strong) 20%,
+    var(--color-accent-dark) 50%,
+    var(--color-border-strong) 80%,
+    transparent
+  );
+}
+
+/* ---- Section Glow Accent (behind hero/key sections) ---- */
+.section-glow {
+  position: relative;
+}
+
+.section-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+  opacity: 0.5;
+}
+
+/* ---- Reduced Motion: Disable all custom effects ---- */
+@media (prefers-reduced-motion: reduce) {
+  .tilt-card,
+  .tilt-card-inner {
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .skeleton::after {
+    animation: none;
+  }
+
+  .animated-underline::after {
+    transition: none;
+  }
+
+  .btn-magnetic {
+    transition: none;
+  }
+}

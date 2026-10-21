@@ -4,6 +4,7 @@ import { HiArrowRight, HiBeaker, HiUsers, HiClock, HiGlobeAlt } from 'react-icon
 import SEOHead from '../../components/shared/SEOHead.jsx';
 import ScrollReveal from '../../components/shared/ScrollReveal.jsx';
 import Marquee from '../../components/shared/Marquee.jsx';
+import AnimatedCounter from '../../animations/AnimatedCounter.jsx';
 import { fetchFeaturedProducts, fetchCategories, fetchPartners } from '../../api/services';
 
 const METRICS = [
@@ -81,7 +82,7 @@ export default function HomePage() {
               <ScrollReveal key={metric.label} delay={i * 100}>
                 <div className="metric-card glass-card-light">
                   <metric.icon className="metric-icon" />
-                  <span className="metric-value">{metric.value}</span>
+                  <AnimatedCounter value={metric.value} className="metric-value" />
                   <span className="metric-label">{metric.label}</span>
                 </div>
               </ScrollReveal>
