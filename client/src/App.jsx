@@ -5,6 +5,7 @@ import ProtectedRoute from './routes/ProtectedRoute.jsx';
 import AdminLayout from './features/admin/AdminLayout.jsx';
 import PageTransition from './animations/PageTransition.jsx';
 import Preloader from './components/shared/Preloader.jsx';
+import CustomCursor from './components/shared/CustomCursor.jsx';
 
 // Public Pages
 import HomePage from './pages/public/HomePage.jsx';
@@ -43,6 +44,9 @@ export default function App() {
     <ErrorBoundary>
       {/* Preloader: session-gated, pointer-events:none, never blocks auth */}
       <Preloader />
+
+      {/* Custom cursor: self-disables on admin/touch/reduced-motion */}
+      <CustomCursor />
 
       {/* PageTransition: skips /admin internally, ≤300ms, calls ScrollTrigger.refresh() */}
       <PageTransition>
