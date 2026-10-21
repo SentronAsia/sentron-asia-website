@@ -5,6 +5,7 @@ import SEOHead from '../../components/shared/SEOHead.jsx';
 import ScrollReveal from '../../components/shared/ScrollReveal.jsx';
 import Marquee from '../../components/shared/Marquee.jsx';
 import AnimatedCounter from '../../animations/AnimatedCounter.jsx';
+import ParticleBackground from '../../components/shared/ParticleBackground.jsx';
 import { fetchFeaturedProducts, fetchCategories, fetchPartners } from '../../api/services';
 
 const METRICS = [
@@ -42,7 +43,7 @@ export default function HomePage() {
       />
 
       {/* ---- Hero Section ---- */}
-      <section className="hero" id="hero">
+      <section className="hero" id="hero" style={{ position: 'relative' }}>
         <div className="hero-bg">
           <img
             src="/assets/hero-lab.jpg"
@@ -53,6 +54,8 @@ export default function HomePage() {
           />
           <div className="hero-overlay" />
         </div>
+        {/* 2D canvas particles — decorative, pointer-events none, theme-aware */}
+        <ParticleBackground count={50} />
         <div className="container hero-content">
           <ScrollReveal direction="up">
             <h6 className="hero-subtitle">Sentron Asia International</h6>
