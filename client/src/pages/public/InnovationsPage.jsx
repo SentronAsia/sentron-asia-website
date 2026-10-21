@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import { HiArrowRight } from 'react-icons/hi2';
 import SEOHead from '../../components/shared/SEOHead.jsx';
 import ScrollReveal from '../../components/shared/ScrollReveal.jsx';
+import TiltCard from '../../components/shared/TiltCard.jsx';
 import { fetchBrands, fetchBrandById, fetchShowcaseStories } from '../../api/services';
 
 /* ---- Brand Showcase Grid (main /innovations page) ---- */
@@ -38,20 +39,22 @@ export default function InnovationsPage() {
             <div className="brands-grid">
               {brands?.data?.map((brand, i) => (
                 <ScrollReveal key={brand._id} delay={i * 80}>
-                  <Link to={`/innovations/${brand._id}`} className="brand-card glass-card-light-hover">
-                    {brand.logo ? (
-                      <img src={brand.logo} alt={brand.name} className="brand-card-logo" loading="lazy" />
-                    ) : (
-                      <div className="brand-card-logo" style={{ height: 48, display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, color: 'var(--color-primary)', fontSize: '1.25rem' }}>
-                        {brand.name}
-                      </div>
-                    )}
-                    <h3 className="brand-card-name">{brand.name}</h3>
-                    {brand.description && <p className="brand-card-desc">{brand.description}</p>}
-                    <span className="btn btn-ghost btn-sm" style={{ marginTop: '0.5rem' }}>
-                      View Innovations <HiArrowRight />
-                    </span>
-                  </Link>
+                  <TiltCard className="brand-card glass-card-light-hover">
+                    <Link to={`/innovations/${brand._id}`} style={{ textDecoration: 'none', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', gap: '1rem', width: '100%' }}>
+                      {brand.logo ? (
+                        <img src={brand.logo} alt={brand.name} className="brand-card-logo" loading="lazy" />
+                      ) : (
+                        <div className="brand-card-logo" style={{ height: 48, display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, color: 'var(--color-primary)', fontSize: '1.25rem' }}>
+                          {brand.name}
+                        </div>
+                      )}
+                      <h3 className="brand-card-name">{brand.name}</h3>
+                      {brand.description && <p className="brand-card-desc">{brand.description}</p>}
+                      <span className="btn btn-ghost btn-sm" style={{ marginTop: '0.5rem' }}>
+                        View Innovations <HiArrowRight />
+                      </span>
+                    </Link>
+                  </TiltCard>
                 </ScrollReveal>
               ))}
             </div>

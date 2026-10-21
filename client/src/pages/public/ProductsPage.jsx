@@ -4,6 +4,7 @@ import { Link, useParams, useSearchParams } from 'react-router-dom';
 import { HiMagnifyingGlass, HiXMark } from 'react-icons/hi2';
 import SEOHead from '../../components/shared/SEOHead.jsx';
 import ScrollReveal from '../../components/shared/ScrollReveal.jsx';
+import TiltCard from '../../components/shared/TiltCard.jsx';
 import { fetchProducts, fetchCategories, fetchBrands } from '../../api/services';
 
 export default function ProductsPage() {
@@ -149,21 +150,23 @@ export default function ProductsPage() {
                 <div className="products-grid">
                   {products?.data?.map((product, i) => (
                     <ScrollReveal key={product._id} delay={i * 60}>
-                      <Link to={`/product/${product.slug}`} className="product-card glass-card-light-hover">
-                        {product.images?.[0] ? (
-                          <img src={product.images[0]} alt={product.name} className="product-card-image" loading="lazy" />
-                        ) : (
-                          <div className="product-card-image" style={{ background: 'var(--color-surface)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                            <span style={{ color: 'var(--color-text-muted)' }}>No Image</span>
-                          </div>
-                        )}
-                        <div className="product-card-body">
-                          <h4 className="product-card-name">{product.name}</h4>
-                          {product.category?.name && (
-                            <span className="product-card-category">{product.category.name}</span>
+                      <TiltCard className="product-card glass-card-light-hover">
+                        <Link to={`/product/${product.slug}`} style={{ textDecoration: 'none', display: 'flex', flexDirection: 'column', flex: 1 }}>
+                          {product.images?.[0] ? (
+                            <img src={product.images[0]} alt={product.name} className="product-card-image" loading="lazy" />
+                          ) : (
+                            <div className="product-card-image" style={{ background: 'var(--color-surface)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                              <span style={{ color: 'var(--color-text-muted)' }}>No Image</span>
+                            </div>
                           )}
-                        </div>
-                      </Link>
+                          <div className="product-card-body">
+                            <h4 className="product-card-name">{product.name}</h4>
+                            {product.category?.name && (
+                              <span className="product-card-category">{product.category.name}</span>
+                            )}
+                          </div>
+                        </Link>
+                      </TiltCard>
                     </ScrollReveal>
                   ))}
                 </div>
