@@ -19,6 +19,7 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: false,
+    chunkSizeWarningLimit: 1000,
     rollupOptions: {
       output: {
         manualChunks(id) {
@@ -27,6 +28,9 @@ export default defineConfig({
           }
           if (id.includes('node_modules/@tanstack') || id.includes('node_modules/axios')) {
             return 'query';
+          }
+          if (id.includes('node_modules/three') || id.includes('node_modules/@react-three')) {
+            return 'three';
           }
         },
       },

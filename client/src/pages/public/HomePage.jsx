@@ -1,3 +1,4 @@
+import { lazy, Suspense } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { Link } from 'react-router-dom';
 import { HiArrowRight, HiBeaker, HiUsers, HiClock, HiGlobeAlt } from 'react-icons/hi2';
@@ -7,6 +8,8 @@ import Marquee from '../../components/shared/Marquee.jsx';
 import AnimatedCounter from '../../animations/AnimatedCounter.jsx';
 import ParticleBackground from '../../components/shared/ParticleBackground.jsx';
 import { fetchFeaturedProducts, fetchCategories, fetchPartners } from '../../api/services';
+
+const HeroScene = lazy(() => import('../../components/three/HeroScene.jsx'));
 
 const METRICS = [
   { icon: HiClock, value: '40+', label: 'Years of Experience' },
@@ -56,6 +59,10 @@ export default function HomePage() {
         </div>
         {/* 2D canvas particles — decorative, pointer-events none, theme-aware */}
         <ParticleBackground count={50} />
+        {/* WebGL hero scene — lazy, theme-aware, pauses off-screen. Fallback = null (CSS gradient visible) */}
+        <Suspense fallback={null}>
+          <HeroScene />
+        </Suspense>
         <div className="container hero-content">
           <ScrollReveal direction="up">
             <h6 className="hero-subtitle">Sentron Asia International</h6>
