@@ -1,6 +1,23 @@
 import { useQuery } from '@tanstack/react-query';
 import { Link } from 'react-router-dom';
-import { HiArrowRight, HiBeaker, HiUsers, HiClock, HiGlobeAlt } from 'react-icons/hi2';
+import {
+  HiArrowRight,
+  HiBeaker,
+  HiUsers,
+  HiClock,
+  HiGlobeAlt,
+  HiScale,
+  HiBolt,
+  HiCpuChip,
+  HiFire,
+  HiSun,
+  HiSignal,
+  HiEyeDropper,
+  HiCube,
+  HiAdjustmentsHorizontal,
+  HiComputerDesktop,
+  HiMagnifyingGlass,
+} from 'react-icons/hi2';
 import SEOHead from '../../components/shared/SEOHead.jsx';
 import ScrollReveal from '../../components/shared/ScrollReveal.jsx';
 import Marquee from '../../components/shared/Marquee.jsx';
@@ -15,6 +32,35 @@ const METRICS = [
   { icon: HiGlobeAlt, value: '50+', label: 'Brands Represented' },
   { icon: HiUsers, value: '500+', label: 'Active Clients' },
 ];
+
+/* Map category names to relevant icons — falls back to HiBeaker */
+const CATEGORY_ICON_MAP = {
+  'auto clave':                   HiAdjustmentsHorizontal,
+  'autoclave':                    HiAdjustmentsHorizontal,
+  'advanced physics':             HiCpuChip,
+  'balances':                     HiScale,
+  'electrochemical workstations': HiCpuChip,
+  'electromagnetism':             HiSignal,
+  'laboratory cabinets':          HiCube,
+  'lab oven & furnaces':          HiFire,
+  'lab ovens & furnaces':         HiFire,
+  'light & optics':               HiSun,
+  'oscilloscope':                 HiComputerDesktop,
+  'oscilloscopes':                HiComputerDesktop,
+  'power supplies':               HiBolt,
+  'power supply':                 HiBolt,
+  'spectrophotometer':            HiEyeDropper,
+  'spectrophotometers':           HiEyeDropper,
+  'analytical instruments':       HiMagnifyingGlass,
+  'life sciences':                HiBeaker,
+  'clinical diagnostics':         HiEyeDropper,
+  'environmental testing':        HiGlobeAlt,
+};
+
+function getCategoryIcon(name) {
+  const key = name?.toLowerCase().trim();
+  return CATEGORY_ICON_MAP[key] || HiBeaker;
+}
 
 const CEO_QUOTE = `"For more than four decades we have built Sentron Asia International on a single principle: a laboratory is only as reliable as the equipment and the people who stand behind it. Our commitment does not end at delivery — it begins there."`;
 const CEO_NAME = 'Mr. Anis Ahmad';
@@ -205,7 +251,7 @@ export default function HomePage() {
                     <img src={cat.image} alt={cat.name} className="category-card-image" loading="lazy" />
                   ) : (
                     <div className="category-card-placeholder">
-                      <HiBeaker className="category-card-placeholder-icon" />
+                      {(() => { const Icon = getCategoryIcon(cat.name); return <Icon className="category-card-placeholder-icon" />; })()}
                     </div>
                   )}
                   <div className="category-card-content">
