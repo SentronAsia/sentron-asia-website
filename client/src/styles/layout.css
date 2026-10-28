@@ -42,17 +42,14 @@
 .header-logo {
   text-decoration: none;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
 }
 
-.header-logo-text {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--color-text);
-  letter-spacing: -0.02em;
-}
-
-.header-logo-accent {
-  color: var(--color-primary);
+.header-logo-img {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
 }
 
 /* Desktop Nav */

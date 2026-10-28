@@ -61,9 +61,11 @@ export default function Header() {
       <div className="container header-inner">
         {/* Logo */}
         <Link to="/" className="header-logo" aria-label="Sentron Asia International home">
-          <span className="header-logo-text">
-            <span className="header-logo-accent">Sentron</span> Asia
-          </span>
+          <img
+            src="/assets/logo.png"
+            alt="Sentron Asia International"
+            className="header-logo-img"
+          />
         </Link>
 
         {/* Desktop Navigation */}
