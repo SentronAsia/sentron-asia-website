@@ -7,6 +7,7 @@ import ScrollReveal from '../../components/shared/ScrollReveal.jsx';
 import Marquee from '../../components/shared/Marquee.jsx';
 import AnimatedCounter from '../../animations/AnimatedCounter.jsx';
 import ParticleBackground from '../../components/shared/ParticleBackground.jsx';
+import FloatingShapes from '../../components/shared/FloatingShapes.jsx';
 import { fetchFeaturedProducts, fetchCategories, fetchPartners } from '../../api/services';
 
 const HeroScene = lazy(() => import('../../components/three/HeroScene.jsx'));
@@ -189,8 +190,10 @@ export default function HomePage() {
       )}
 
       {/* ---- Categories Grid ---- */}
-      <section className="section categories-section" id="categories">
-        <div className="container">
+      <section className="section categories-section" id="categories" style={{ position: 'relative' }}>
+        {/* CSS 3D floating shapes — decorative, no WebGL, theme-aware */}
+        <FloatingShapes />
+        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <ScrollReveal>
             <h2 className="section-title">Product Categories</h2>
             <p className="section-description">
