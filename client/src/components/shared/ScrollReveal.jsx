@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { gsap } from '../../animations/gsapConfig.js';
+import { gsap, ScrollTrigger } from '../../animations/gsapConfig.js';
 import useReducedMotion from '../../hooks/useReducedMotion.js';
 
 /**
@@ -9,15 +9,16 @@ import useReducedMotion from '../../hooks/useReducedMotion.js';
  *   children, className, threshold, delay, direction
  *
  * Behaviour:
- * - If JS/animation fails → content is visible immediately (no opacity:0 on no-JS)
+ * - Content is always visible by default (opacity: 1 in CSS)
+ * - GSAP animates it on scroll if available
+ * - If JS/animation fails → content remains visible
  * - Respects prefers-reduced-motion
- * - Uses GSAP ScrollTrigger (registered in gsapConfig.js)
  * - direction: 'up' | 'down' | 'left' | 'right' | 'none'
  */
 export default function ScrollReveal({
   children,
   className = '',
-  threshold = 0.15,   // kept for API compat; maps to start offset
+  threshold = 0.15,
   delay = 0,
   direction = 'up',
 }) {
@@ -26,50 +27,63 @@ export default function ScrollReveal({
 
   useEffect(() => {
     const el = ref.current;
-    if (!el) return;
+    if (!el || prefersReduced) return;
 
-    // Immediately visible for reduced motion or if GSAP unavailable
-    if (prefersReduced) {
-      gsap.set(el, { opacity: 1, x: 0, y: 0 });
-      return;
-    }
+    // Compute direction offsets
+    let yFrom = 0, xFrom = 0;
+    if (direction === 'up')    yFrom = 28;
+    if (direction === 'down')  yFrom = -28;
+    if (direction === 'left')  xFrom = -28;
+    if (direction === 'right') xFrom = 28;
 
-    // Direction → initial transform
-    const fromVars = { opacity: 0, duration: 0.75, ease: 'power2.out', delay: delay / 1000 };
-    if (direction === 'up')    fromVars.y = 28;
-    if (direction === 'down')  fromVars.y = -28;
-    if (direction === 'left')  fromVars.x = -28;
-    if (direction === 'right') fromVars.x = 28;
-    // 'none' → opacity only
+    const startOffset = Math.round((1 - threshold) * 80);
 
-    // Map threshold (0–1) to a ScrollTrigger start offset
-    const startOffset = Math.round((1 - threshold) * 80); // e.g. 0.15 → "80% bottom"
+    // Set initial hidden state via GSAP (not CSS — so no-JS = visible)
+    gsap.set(el, { opacity: 0, y: yFrom, x: xFrom });
 
-    const tween = gsap.from(el, {
-      ...fromVars,
-      scrollTrigger: {
-        trigger: el,
-        start: `top ${startOffset + 20}%`,
-        toggleActions: 'play none none none',
-        once: true,
+    // Create ScrollTrigger that animates to visible on enter
+    const trigger = ScrollTrigger.create({
+      trigger: el,
+      start: `top ${startOffset + 20}%`,
+      once: true,
+      onEnter: () => {
+        gsap.to(el, {
+          opacity: 1,
+          y: 0,
+          x: 0,
+          duration: 0.75,
+          delay: delay / 1000,
+          ease: 'power2.out',
+        });
       },
     });
 
+    // Safety: if element is already past the trigger point (e.g. page loaded
+    // with it in view), ScrollTrigger.refresh() should catch it. But as a
+    // belt-and-suspenders fallback, force-reveal after a short delay.
+    const safetyTimer = setTimeout(() => {
+      if (parseFloat(getComputedStyle(el).opacity) < 0.1) {
+        gsap.to(el, { opacity: 1, y: 0, x: 0, duration: 0.4, ease: 'power2.out' });
+      }
+    }, 1500);
+
+    // Also refresh ScrollTrigger after a microtask so elements already in
+    // view get their onEnter fired immediately
+    requestAnimationFrame(() => {
+      ScrollTrigger.refresh();
+    });
+
     return () => {
-      tween.scrollTrigger?.kill();
-      tween.kill();
+      clearTimeout(safetyTimer);
+      trigger.kill();
     };
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [direction, delay, prefersReduced]);
 
   return (
-    <div
-      ref={ref}
-      className={className}
-      // Ensure content is always visible at CSS level — JS sets opacity via GSAP
-      style={{ opacity: prefersReduced ? 1 : undefined }}
-    >
+    <div ref={ref} className={className}>
       {children}
     </div>
   );
 }
+
