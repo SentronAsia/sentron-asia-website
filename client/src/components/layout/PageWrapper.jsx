@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import Header from './Header.jsx';
 import Footer from './Footer.jsx';
 import useLenis from '../../hooks/useLenis.js';
 
@@ -17,7 +16,6 @@ export default function PageWrapper({ children }) {
 
   return (
     <div className="page-wrapper">
-      <Header />
       <main className="page-main" id="main-content">
         {children}
       </main>

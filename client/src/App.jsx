@@ -1,5 +1,6 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import PageWrapper from './components/layout/PageWrapper.jsx';
+import Header from './components/layout/Header.jsx';
 import ErrorBoundary from './components/shared/ErrorBoundary.jsx';
 import ProtectedRoute from './routes/ProtectedRoute.jsx';
 import AdminLayout from './features/admin/AdminLayout.jsx';
@@ -40,6 +41,9 @@ import './styles/pages.css';
 import './styles/admin.css';
 
 export default function App() {
+  const location = useLocation();
+  const isAdmin = location.pathname.startsWith('/admin');
+
   return (
     <ErrorBoundary>
       {/* Preloader: session-gated, pointer-events:none, never blocks auth */}
@@ -47,6 +51,9 @@ export default function App() {
 
       {/* Custom cursor: self-disables on admin/touch/reduced-motion */}
       <CustomCursor />
+
+      {/* Header outside PageTransition so position:fixed isn't broken by transform */}
+      {!isAdmin && <Header />}
 
       {/* PageTransition: skips /admin internally, ≤300ms, calls ScrollTrigger.refresh() */}
       <PageTransition>
