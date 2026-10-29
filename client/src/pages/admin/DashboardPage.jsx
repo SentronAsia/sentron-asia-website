@@ -29,7 +29,7 @@ export default function DashboardPage() {
 
       <div className="admin-stats-grid">
         {STAT_CARDS.map((card) => (
-          <div key={card.key} className="admin-stat-card glass-card-light">
+          <div key={card.key} className="admin-stat-card glass-card-light-hover">
             <div className="admin-stat-icon-wrapper" style={{ '--stat-color': card.color }}>
               <card.icon className="admin-stat-icon" />
             </div>

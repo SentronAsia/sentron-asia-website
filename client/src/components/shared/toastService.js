@@ -12,3 +12,4 @@ export function notify(message, type = 'info') {
     toastListener({ message, type, id: Date.now() });
   }
 }
+

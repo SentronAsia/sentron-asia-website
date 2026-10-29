@@ -90,33 +90,44 @@
   display: flex;
   align-items: center;
   gap: 0.625rem;
-  padding: 0.5rem 0.75rem;
+  padding: 0.55rem 0.85rem;
   font-size: 0.9375rem;
+  font-weight: 500;
   color: var(--color-text-secondary);
   border-radius: var(--radius-md);
   text-decoration: none;
-  transition: color 150ms ease, background-color 150ms ease;
+  transition: color 150ms ease, background-color 150ms ease, transform 150ms ease;
   cursor: pointer;
   border: none;
+  border-left: 3px solid transparent;
   background: none;
   width: 100%;
   text-align: left;
   font-family: inherit;
+  position: relative;
 }
 
 .admin-nav-link:hover {
   color: var(--color-text);
   background: var(--color-surface-elevated);
+  transform: translateX(2px);
 }
 
 .admin-nav-link--active {
-  color: var(--color-primary);
-  background: oklch(0.38 0.072 208 / 0.08);
-  font-weight: 500;
+  color: #00a6b2;
+  background: oklch(0.66 0.117 203 / 0.1);
+  font-weight: 600;
+  border-left-color: #00a6b2;
 }
 
 [data-theme="dark"] .admin-nav-link--active {
-  background: oklch(0.72 0.12 195 / 0.1);
+  color: #00a6b2;
+  background: oklch(0.68 0.14 160 / 0.15);
+  border-left-color: #00a6b2;
+}
+
+.admin-nav-link--active .admin-nav-icon {
+  color: #00a6b2;
 }
 
 .admin-nav-icon {
@@ -214,19 +225,52 @@
 .admin-stat-card {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  padding: 1.25rem;
+  gap: 1.125rem;
+  padding: 1.35rem;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border);
+  transition: transform 250ms ease, box-shadow 250ms ease, border-color 250ms ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.admin-stat-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--stat-color, #00a6b2);
+  opacity: 0.65;
+  transition: opacity 250ms ease;
+}
+
+.admin-stat-card:hover {
+  transform: translateY(-2px);
+  border-color: #00a6b2;
+  box-shadow: var(--shadow-md);
+}
+
+.admin-stat-card:hover::after {
+  opacity: 1;
 }
 
 .admin-stat-icon-wrapper {
-  width: 3rem;
-  height: 3rem;
+  width: 3.25rem;
+  height: 3.25rem;
   border-radius: var(--radius-lg);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: color-mix(in oklch, var(--stat-color) 10%, transparent);
+  background: color-mix(in oklch, var(--stat-color) 12%, transparent);
+  border: 1px solid color-mix(in oklch, var(--stat-color) 25%, transparent);
   flex-shrink: 0;
+  transition: transform 250ms ease;
+}
+
+.admin-stat-card:hover .admin-stat-icon-wrapper {
+  transform: scale(1.08);
 }
 
 .admin-stat-icon {
@@ -251,6 +295,10 @@
 .admin-table-wrapper {
   padding: 0;
   overflow: hidden;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  background: var(--color-surface-elevated);
 }
 
 .admin-table {
@@ -259,34 +307,35 @@
 }
 
 .admin-table th {
-  padding: 0.75rem 1rem;
+  padding: 0.875rem 1.125rem;
   text-align: left;
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   color: var(--color-text-muted);
   border-bottom: 1px solid var(--color-border);
   background: var(--color-surface);
 }
 
 .admin-table td {
-  padding: 0.75rem 1rem;
+  padding: 0.875rem 1.125rem;
   font-size: 0.9375rem;
-  color: var(--color-text-secondary);
+  color: var(--color-text);
   border-bottom: 1px solid var(--color-border);
+  transition: background-color 150ms ease;
 }
 
 .admin-table tr:last-child td {
   border-bottom: none;
 }
 
-.admin-table tr:hover td {
-  background: oklch(0.38 0.072 208 / 0.03);
+.admin-table tbody tr:hover td {
+  background: oklch(0.66 0.117 203 / 0.05);
 }
 
-[data-theme="dark"] .admin-table tr:hover td {
-  background: oklch(0.72 0.12 195 / 0.04);
+[data-theme="dark"] .admin-table tbody tr:hover td {
+  background: oklch(0.68 0.14 160 / 0.08);
 }
 
 /* Media Library */
