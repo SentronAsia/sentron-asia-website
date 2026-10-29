@@ -23,6 +23,7 @@ export default function InnovationsPage() {
       <section className="products-page-header">
         <div className="container">
           <ScrollReveal>
+            <span className="page-header-badge">Technological Highlights</span>
             <h1>Innovations & Highlights</h1>
             <p>Discover the brands driving scientific progress and their breakthrough solutions.</p>
           </ScrollReveal>

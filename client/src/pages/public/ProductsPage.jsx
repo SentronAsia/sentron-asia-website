@@ -65,6 +65,7 @@ export default function ProductsPage() {
       <section className="products-page-header">
         <div className="container">
           <ScrollReveal>
+            <span className="page-header-badge">Precision Catalogue</span>
             <h1>Products Catalogue</h1>
             <p>Explore our complete range of laboratory and analytical instruments.</p>
           </ScrollReveal>

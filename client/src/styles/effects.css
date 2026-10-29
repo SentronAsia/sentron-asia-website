@@ -205,23 +205,24 @@
   height: 1px;
   background: linear-gradient(
     90deg,
-    transparent,
-    var(--color-border-strong) 20%,
-    var(--color-accent) 50%,
-    var(--color-border-strong) 80%,
-    transparent
+    transparent 5%,
+    var(--color-border) 25%,
+    oklch(0.66 0.117 203 / 0.5) 50%,
+    var(--color-border) 75%,
+    transparent 95%
   );
   border: none;
+  width: 100%;
 }
 
 [data-theme="dark"] .gradient-divider {
   background: linear-gradient(
     90deg,
-    transparent,
-    var(--color-border-strong) 20%,
-    var(--color-accent-dark) 50%,
-    var(--color-border-strong) 80%,
-    transparent
+    transparent 5%,
+    var(--color-border) 25%,
+    oklch(0.68 0.14 160 / 0.5) 50%,
+    var(--color-border) 75%,
+    transparent 95%
   );
 }
 

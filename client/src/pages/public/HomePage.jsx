@@ -157,6 +157,8 @@ export default function HomePage() {
         </div>
       </section>
 
+      <div className="gradient-divider" />
+
       {/* ---- CEO Message ---- */}
       <section className="section ceo-section" id="ceo-message">
         <div className="container container-narrow">
@@ -178,6 +180,8 @@ export default function HomePage() {
           </ScrollReveal>
         </div>
       </section>
+
+      <div className="gradient-divider" />
 
       {/* ---- Partner Logo Marquee ---- */}
       {partners?.data?.length > 0 && (
@@ -245,6 +249,7 @@ export default function HomePage() {
       )}
 
       {/* ---- Categories Grid ---- */}
+      <div className="gradient-divider" />
       <section className="section categories-section" id="categories" style={{ position: 'relative' }}>
         {/* CSS 3D floating shapes — decorative, no WebGL, theme-aware */}
         <FloatingShapes />

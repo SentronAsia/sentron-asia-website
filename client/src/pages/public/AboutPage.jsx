@@ -18,9 +18,10 @@ export default function AboutPage() {
         description="Learn about Sentron Asia International — 40+ years of delivering precision laboratory and analytical equipment to the scientific community."
       />
 
-      <section className="about-hero">
+      <section className="about-hero products-page-header">
         <div className="container">
           <ScrollReveal>
+            <span className="page-header-badge">Our Legacy & Mission</span>
             <h1>About Sentron Asia International</h1>
             <p>Four decades of connecting laboratories with the world's finest scientific instruments.</p>
           </ScrollReveal>

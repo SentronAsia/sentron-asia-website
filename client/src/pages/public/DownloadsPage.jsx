@@ -61,7 +61,8 @@ export default function DownloadsPage() {
       <section className="products-page-header">
         <div className="container">
           <ScrollReveal>
-            <h1>Downloads</h1>
+            <span className="page-header-badge">Resource Center</span>
+            <h1>Downloads & Documentation</h1>
             <p>Access product documentation, brochures, datasheets, and certificates.</p>
           </ScrollReveal>
         </div>

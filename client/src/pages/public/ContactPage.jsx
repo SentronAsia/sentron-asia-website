@@ -64,6 +64,7 @@ export default function ContactPage() {
       <section className="products-page-header">
         <div className="container">
           <ScrollReveal>
+            <span className="page-header-badge">Get in Touch</span>
             <h1>Contact Us</h1>
             <p>We'd love to hear from you. Reach out to us with any questions or inquiries.</p>
           </ScrollReveal>
