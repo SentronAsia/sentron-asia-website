@@ -78,7 +78,7 @@ export default function AboutPage() {
                 { title: 'Service', desc: 'Our commitment begins at delivery — we stand behind every instrument with ongoing support.' },
                 { title: 'Innovation', desc: 'We continuously seek new technologies and methodologies to serve the evolving needs of science.' },
               ].map((value) => (
-                <div key={value.title} className="glass-card-light" style={{ padding: '1.5rem' }}>
+                <div key={value.title} className="glass-card-light-hover" style={{ padding: '1.5rem' }}>
                   <h4 style={{ marginBottom: '0.5rem', color: 'var(--color-primary)' }}>{value.title}</h4>
                   <p style={{ fontSize: '0.875rem' }}>{value.desc}</p>
                 </div>

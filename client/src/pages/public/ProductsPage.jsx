@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { Link, useParams, useSearchParams } from 'react-router-dom';
-import { HiMagnifyingGlass, HiXMark } from 'react-icons/hi2';
+import { HiMagnifyingGlass, HiXMark, HiBeaker } from 'react-icons/hi2';
 import SEOHead from '../../components/shared/SEOHead.jsx';
 import ScrollReveal from '../../components/shared/ScrollReveal.jsx';
 import TiltCard from '../../components/shared/TiltCard.jsx';
@@ -153,10 +153,13 @@ export default function ProductsPage() {
                       <TiltCard className="product-card glass-card-light-hover">
                         <Link to={`/product/${product.slug}`} style={{ textDecoration: 'none', display: 'flex', flexDirection: 'column', flex: 1 }}>
                           {product.images?.[0] ? (
-                            <img src={product.images[0]} alt={product.name} className="product-card-image" loading="lazy" />
+                            <div className="product-card-image-wrap">
+                              <img src={product.images[0]} alt={product.name} className="product-card-image" loading="lazy" />
+                            </div>
                           ) : (
-                            <div className="product-card-image" style={{ background: 'var(--color-surface)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                              <span style={{ color: 'var(--color-text-muted)' }}>No Image</span>
+                            <div className="product-card-placeholder-image">
+                              <HiBeaker className="product-placeholder-icon" />
+                              <span className="product-placeholder-text">Laboratory Equipment</span>
                             </div>
                           )}
                           <div className="product-card-body">

@@ -93,7 +93,7 @@ export default function DownloadsPage() {
                             </p>
                           </div>
                           <button
-                            className="btn btn-outline btn-sm"
+                            className="btn btn-outline btn-sm download-card-btn"
                             onClick={() => handleDownload(doc._id, doc.name)}
                             aria-label={`Download ${doc.name}`}
                           >

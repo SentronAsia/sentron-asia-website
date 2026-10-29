@@ -1,10 +1,10 @@
 import { useQuery } from '@tanstack/react-query';
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { HiArrowRight } from 'react-icons/hi2';
 import SEOHead from '../../components/shared/SEOHead.jsx';
 import ScrollReveal from '../../components/shared/ScrollReveal.jsx';
 import TiltCard from '../../components/shared/TiltCard.jsx';
-import { fetchBrands, fetchBrandById, fetchShowcaseStories } from '../../api/services';
+import { fetchBrands } from '../../api/services';
 
 /* ---- Brand Showcase Grid (main /innovations page) ---- */
 export default function InnovationsPage() {
