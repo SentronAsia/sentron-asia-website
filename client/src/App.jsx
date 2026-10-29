@@ -7,6 +7,8 @@ import AdminLayout from './features/admin/AdminLayout.jsx';
 import PageTransition from './animations/PageTransition.jsx';
 import Preloader from './components/shared/Preloader.jsx';
 import CustomCursor from './components/shared/CustomCursor.jsx';
+import BackToTop from './components/shared/BackToTop.jsx';
+import ToastContainer from './components/shared/Toast.jsx';
 
 // Public Pages
 import HomePage from './pages/public/HomePage.jsx';
@@ -52,8 +54,12 @@ export default function App() {
       {/* Custom cursor: self-disables on admin/touch/reduced-motion */}
       <CustomCursor />
 
-      {/* Header outside PageTransition so position:fixed isn't broken by transform */}
+      {/* Floating toast notification container */}
+      <ToastContainer />
+
+      {/* Header and Back to Top outside PageTransition so position:fixed isn't broken by transform */}
       {!isAdmin && <Header />}
+      {!isAdmin && <BackToTop />}
 
       {/* PageTransition: skips /admin internally, ≤300ms, calls ScrollTrigger.refresh() */}
       <PageTransition>

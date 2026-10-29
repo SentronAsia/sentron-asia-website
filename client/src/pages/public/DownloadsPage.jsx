@@ -2,6 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import { HiArrowDownTray, HiDocumentText, HiDocumentChartBar, HiDocument } from 'react-icons/hi2';
 import SEOHead from '../../components/shared/SEOHead.jsx';
 import ScrollReveal from '../../components/shared/ScrollReveal.jsx';
+import { notify } from '../../components/shared/toastService.js';
 import { fetchDocuments, getDocumentDownloadUrl } from '../../api/services';
 
 const DOC_ICONS = {
@@ -37,7 +38,7 @@ export default function DownloadsPage() {
       link.click();
       document.body.removeChild(link);
     } catch {
-      alert('Failed to generate download link. Please try again.');
+      notify('Failed to generate download link. Please try again.', 'error');
     }
   };
 
