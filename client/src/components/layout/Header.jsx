@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useSyncExternalStore } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { HiOutlineBars3, HiXMark, HiChevronDown, HiLockClosed } from 'react-icons/hi2';
 import ThemeToggle from '../shared/ThemeToggle.jsx';
@@ -16,7 +16,18 @@ const NAV_LINKS = [
   { label: 'Contact', to: '/contact' },
 ];
 
+/* Reactive theme subscription — re-renders when data-theme changes */
+function subscribeTheme(cb) {
+  const observer = new MutationObserver(cb);
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+  return () => observer.disconnect();
+}
+function getThemeSnapshot() {
+  return document.documentElement.getAttribute('data-theme') === 'dark';
+}
+
 export default function Header() {
+  const isDark = useSyncExternalStore(subscribeTheme, getThemeSnapshot);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -62,7 +73,7 @@ export default function Header() {
         {/* Logo */}
         <Link to="/" className="header-logo" aria-label="Sentron Asia International home">
           <img
-            src="/assets/logo.png"
+            src={isDark ? '/assets/logo.png' : '/assets/logo-light.png'}
             alt="Sentron Asia International"
             className="header-logo-img"
           />
