@@ -53,6 +53,13 @@
   margin-bottom: 1.25rem;
 }
 
+.hero-title-gradient {
+  background: linear-gradient(135deg, #ffffff 30%, #00a6b2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
 .hero-description {
   color: oklch(0.90 0.01 200);
   font-size: clamp(1rem, 1.5vw + 0.25rem, 1.2rem);
@@ -76,6 +83,87 @@
   border-color: white;
   background: oklch(1 0 0 / 0.1);
   color: white;
+}
+
+/* ---- Hero Scroll Indicator ---- */
+.hero-scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  color: oklch(0.92 0.01 200 / 0.8);
+  text-decoration: none;
+  font-size: 0.6875rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: color 250ms ease, transform 250ms ease;
+  cursor: pointer;
+}
+
+.hero-scroll-indicator:hover {
+  color: white;
+  transform: translateX(-50%) translateY(3px);
+}
+
+.scroll-indicator-mouse {
+  width: 22px;
+  height: 36px;
+  border: 2px solid oklch(1 0 0 / 0.45);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  padding-top: 6px;
+  transition: border-color 250ms ease;
+}
+
+.hero-scroll-indicator:hover .scroll-indicator-mouse {
+  border-color: #00a6b2;
+}
+
+.scroll-indicator-wheel {
+  width: 3px;
+  height: 6px;
+  background: #00a6b2;
+  border-radius: 2px;
+  animation: mouse-scroll-bounce 2s infinite ease-in-out;
+}
+
+@keyframes mouse-scroll-bounce {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.2;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll-indicator-arrow {
+  width: 1.125rem;
+  height: 1.125rem;
+  animation: arrow-bounce 2s infinite ease-in-out;
+}
+
+@keyframes arrow-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
+
+@media (max-width: 640px) {
+  .hero-scroll-indicator {
+    display: none;
+  }
 }
 
 /* ---- METRICS ---- */

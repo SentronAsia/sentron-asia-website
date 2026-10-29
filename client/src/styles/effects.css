@@ -155,6 +155,39 @@
   100% { transform: translateX(100%); }
 }
 
+/* ---- CTA Button Shimmer Sweep ---- */
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shimmer::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.28) 50%,
+    transparent 70%
+  );
+  transform: rotate(25deg) translateY(-140%);
+  animation: shimmer-sweep 4.5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes shimmer-sweep {
+  0%, 65% {
+    transform: rotate(25deg) translateY(-140%);
+  }
+  85%, 100% {
+    transform: rotate(25deg) translateY(140%);
+  }
+}
+
 /* ---- Magnetic Button Effect Prep ---- */
 .btn-magnetic {
   transition: transform 200ms ease;
@@ -219,6 +252,11 @@
 
   .skeleton::after {
     animation: none;
+  }
+
+  .btn-shimmer::before {
+    animation: none;
+    display: none;
   }
 
   .animated-underline::after {

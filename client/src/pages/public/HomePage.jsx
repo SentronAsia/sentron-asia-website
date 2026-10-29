@@ -17,6 +17,7 @@ import {
   HiAdjustmentsHorizontal,
   HiComputerDesktop,
   HiMagnifyingGlass,
+  HiChevronDown,
 } from 'react-icons/hi2';
 import SEOHead from '../../components/shared/SEOHead.jsx';
 import ScrollReveal from '../../components/shared/ScrollReveal.jsx';
@@ -104,16 +105,23 @@ export default function HomePage() {
         {/* 2D canvas particles — decorative, pointer-events none, theme-aware */}
         <ParticleBackground count={50} />
         <div className="container hero-content">
-          <ScrollReveal direction="up">
+          <ScrollReveal direction="up" delay={0}>
             <h6 className="hero-subtitle">Sentron Asia International</h6>
+          </ScrollReveal>
+          <ScrollReveal direction="up" delay={120}>
             <h1 className="hero-title">
-              Connect with the<br />Scientific World
+              Connect with the<br />
+              <span className="hero-title-gradient">Scientific World</span>
             </h1>
+          </ScrollReveal>
+          <ScrollReveal direction="up" delay={240}>
             <p className="hero-description">
               Your trusted partner for precision laboratory and analytical instruments, serving the scientific community for over four decades.
             </p>
+          </ScrollReveal>
+          <ScrollReveal direction="up" delay={360}>
             <div className="hero-actions">
-              <Link to="/products" className="btn btn-accent btn-lg">
+              <Link to="/products" className="btn btn-accent btn-lg btn-shimmer">
                 Explore Products <HiArrowRight />
               </Link>
               <Link to="/contact" className="btn btn-outline btn-lg hero-btn-outline">
@@ -122,6 +130,14 @@ export default function HomePage() {
             </div>
           </ScrollReveal>
         </div>
+
+        {/* Scroll Indicator */}
+        <a href="#metrics" className="hero-scroll-indicator" aria-label="Scroll down to content">
+          <span className="scroll-indicator-mouse">
+            <span className="scroll-indicator-wheel" />
+          </span>
+          <HiChevronDown className="scroll-indicator-arrow" />
+        </a>
       </section>
 
       {/* ---- Metrics Bar ---- */}
