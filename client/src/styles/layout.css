@@ -106,7 +106,7 @@
   padding: 0.5rem 0.875rem;
   font-size: 0.9375rem;
   font-weight: 450;
-  color: var(--color-text-secondary);
+  color: var(--color-text);
   border-radius: var(--radius-md);
   transition: color 200ms ease, background-color 200ms ease;
   text-decoration: none;
@@ -158,20 +158,6 @@
   border-radius: 1px;
   transform: scaleX(1);
   animation: nav-underline-enter 300ms ease forwards;
-}
-
-/* Active link glow dot */
-.nav-link--active::before {
-  content: '';
-  position: absolute;
-  top: 0.35rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 4px;
-  height: 4px;
-  border-radius: var(--radius-full);
-  background: var(--color-primary);
-  box-shadow: 0 0 6px var(--color-glow-primary);
 }
 
 @keyframes nav-underline-enter {
