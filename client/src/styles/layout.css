@@ -25,44 +25,6 @@
   transition: background-color 400ms ease, box-shadow 400ms ease, backdrop-filter 400ms ease, border-color 400ms ease;
 }
 
-/* Transparent state — used on homepage before scroll */
-.site-header--transparent {
-  background: transparent;
-  border-bottom-color: transparent;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-}
-
-/* Make nav text white on transparent hero background */
-.site-header--transparent .nav-link {
-  color: oklch(0.92 0.01 200);
-}
-.site-header--transparent .nav-link:hover {
-  color: white;
-  background: oklch(1 0 0 / 0.1);
-}
-.site-header--transparent .nav-link--active {
-  color: white;
-}
-.site-header--transparent .nav-link--active::after {
-  background: white;
-}
-.site-header--transparent .theme-toggle-btn {
-  background: oklch(1 0 0 / 0.1);
-  border-color: oklch(1 0 0 / 0.2);
-  color: white;
-}
-.site-header--transparent .admin-lock-btn {
-  color: oklch(0.85 0.01 200);
-}
-.site-header--transparent .admin-lock-btn:hover {
-  color: white;
-  background: oklch(1 0 0 / 0.1);
-}
-.site-header--transparent .mobile-menu-btn {
-  color: white;
-}
-
 .site-header--scrolled {
   box-shadow: var(--shadow-md);
   backdrop-filter: blur(24px) saturate(1.5);
@@ -105,8 +67,8 @@
 .nav-link {
   padding: 0.5rem 0.875rem;
   font-size: 0.9375rem;
-  font-weight: 450;
-  color: var(--color-text);
+  font-weight: 500;
+  color: #000000;
   border-radius: var(--radius-md);
   transition: color 200ms ease, background-color 200ms ease;
   text-decoration: none;
@@ -114,6 +76,10 @@
   align-items: center;
   gap: 0.25rem;
   position: relative;
+}
+
+[data-theme="dark"] .nav-link {
+  color: #ffffff;
 }
 
 /* Animated underline on hover */
@@ -124,7 +90,7 @@
   left: 0.875rem;
   right: 0.875rem;
   height: 2px;
-  background: var(--color-accent);
+  background: #00a6b2;
   border-radius: 1px;
   transform: scaleX(0);
   transform-origin: left;
@@ -136,15 +102,25 @@
 }
 
 .nav-link:hover {
-  color: var(--color-text);
+  color: #00a6b2;
   background-color: var(--color-surface);
 }
 
-/* Animated underline for active nav links */
+/* Active nav link — Hex 00a6b2 */
 .nav-link--active {
-  color: var(--color-primary);
-  font-weight: 500;
+  color: #00a6b2 !important;
+  font-weight: 600;
   position: relative;
+}
+
+[data-theme="dark"] .nav-link--active {
+  color: #00a6b2 !important;
+}
+
+/* Explicitly disable any dot pseudo-elements */
+.nav-link--active::before {
+  display: none !important;
+  content: none !important;
 }
 
 .nav-link--active::after {
@@ -154,7 +130,7 @@
   left: 0.875rem;
   right: 0.875rem;
   height: 2px;
-  background: var(--color-primary);
+  background: #00a6b2;
   border-radius: 1px;
   transform: scaleX(1);
   animation: nav-underline-enter 300ms ease forwards;
@@ -242,14 +218,18 @@
   width: 2.25rem;
   height: 2.25rem;
   border-radius: var(--radius-md);
-  color: var(--color-text-muted);
+  color: #000000;
   font-size: 1rem;
   transition: color 200ms ease, background-color 200ms ease;
   text-decoration: none;
 }
 
+[data-theme="dark"] .admin-lock-btn {
+  color: #ffffff;
+}
+
 .admin-lock-btn:hover {
-  color: var(--color-primary);
+  color: #00a6b2;
   background: var(--color-surface);
 }
 
@@ -260,8 +240,12 @@
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
-  color: var(--color-text);
+  color: #000000;
   border-radius: var(--radius-md);
+}
+
+[data-theme="dark"] .mobile-menu-btn {
+  color: #ffffff;
 }
 
 .mobile-menu-btn:hover {
@@ -291,8 +275,8 @@
 .mobile-nav-link {
   padding: 0.75rem 1rem;
   font-size: 1rem;
-  font-weight: 450;
-  color: var(--color-text-secondary);
+  font-weight: 500;
+  color: #000000;
   text-decoration: none;
   border-radius: var(--radius-md);
   transition: color 150ms ease, background-color 150ms ease;
@@ -300,20 +284,13 @@
   animation: mobile-link-enter 350ms ease both;
 }
 
-@keyframes mobile-link-enter {
-  from {
-    opacity: 0;
-    transform: translateX(-12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+[data-theme="dark"] .mobile-nav-link {
+  color: #ffffff;
 }
 
 .mobile-nav-link:hover,
 .mobile-nav-link--active {
-  color: var(--color-primary);
+  color: #00a6b2 !important;
   background: var(--color-surface);
 }
 

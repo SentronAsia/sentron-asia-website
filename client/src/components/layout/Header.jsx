@@ -64,12 +64,10 @@ export default function Header() {
     return () => { document.body.style.overflow = ''; };
   }, [mobileOpen]);
 
-  const isHome = location.pathname === '/';
-
   return (
     <header
       id="site-header"
-      className={`site-header ${scrolled ? 'site-header--scrolled' : ''} ${!scrolled && isHome ? 'site-header--transparent' : 'glass-panel-light'}`}
+      className={`site-header glass-panel-light ${scrolled ? 'site-header--scrolled' : ''}`}
     >
       <div className="container header-inner">
         {/* Logo */}
