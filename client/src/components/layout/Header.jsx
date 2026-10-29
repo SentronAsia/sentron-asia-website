@@ -64,10 +64,12 @@ export default function Header() {
     return () => { document.body.style.overflow = ''; };
   }, [mobileOpen]);
 
+  const isHome = location.pathname === '/';
+
   return (
     <header
       id="site-header"
-      className={`site-header glass-panel-light ${scrolled ? 'site-header--scrolled' : ''}`}
+      className={`site-header ${scrolled ? 'site-header--scrolled' : ''} ${!scrolled && isHome ? 'site-header--transparent' : 'glass-panel-light'}`}
     >
       <div className="container header-inner">
         {/* Logo */}
@@ -154,13 +156,14 @@ export default function Header() {
             onClick={(e) => e.stopPropagation()}
             aria-label="Mobile navigation"
           >
-            {NAV_LINKS.map((link) => (
+            {NAV_LINKS.map((link, i) => (
               <NavLink
                 key={link.to}
                 to={link.to}
                 className={({ isActive }) =>
                   `mobile-nav-link ${isActive ? 'mobile-nav-link--active' : ''}`
                 }
+                style={{ animationDelay: `${i * 50}ms` }}
                 onClick={() => setMobileOpen(false)}
               >
                 {link.label}
