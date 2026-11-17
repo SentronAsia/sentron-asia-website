@@ -51,12 +51,12 @@ export default function SettingsManager() {
       const url = window.URL.createObjectURL(new Blob([response.data]));
       const link = document.createElement('a');
       link.href = url;
-      
+
       const contentDisposition = response.headers['content-disposition'];
       let filename = 'sentron-db-backup.json';
       if (contentDisposition) {
         const filenameMatch = contentDisposition.match(/filename=(.+)/);
-        if (filenameMatch.length === 2) {
+        if (filenameMatch && filenameMatch.length === 2) {
           filename = filenameMatch[1];
         }
       }
@@ -65,8 +65,7 @@ export default function SettingsManager() {
       document.body.appendChild(link);
       link.click();
       link.remove();
-    } catch (error) {
-      console.error('Failed to export database', error);
+    } catch {
       alert('Failed to export database.');
     }
   };
@@ -90,7 +89,7 @@ export default function SettingsManager() {
 
       <div className="glass-card-light" style={{ maxWidth: '600px', padding: '2rem' }}>
         <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-          
+
           <div className="form-group">
             <label className="form-label" htmlFor="siteName">Site Name</label>
             <input
@@ -158,7 +157,7 @@ export default function SettingsManager() {
               </span>
             )}
           </div>
-          
+
           {updateMutation.isError && (
             <p className="form-error">
               {updateMutation.error?.response?.data?.message || 'Failed to update settings.'}

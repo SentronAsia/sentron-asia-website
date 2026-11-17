@@ -61,8 +61,7 @@ export default function ImageUploadField({
       } else if (res?.data?.url) {
         onChange(res.data.url);
       }
-    } catch (err) {
-      console.warn('Backend upload failed, using client-side fallback data URL:', err);
+    } catch {
       // Client-side fallback so admin work is never blocked even if server is offline
       const reader = new FileReader();
       reader.onload = (e) => {

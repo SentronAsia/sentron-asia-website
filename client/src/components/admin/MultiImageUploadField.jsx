@@ -41,6 +41,7 @@ export default function MultiImageUploadField({
 
     if (values.length + incomingFiles.length > maxFiles) {
       setError(`Maximum ${maxFiles} images allowed.`);
+      return;
     }
 
     const filesToUpload = incomingFiles.slice(0, maxFiles - values.length);
@@ -69,8 +70,8 @@ export default function MultiImageUploadField({
       } else {
         throw new Error('No URLs returned from upload.');
       }
-    } catch (err) {
-      console.warn('Backend batch upload failed; generating client-side fallback data URLs:', err);
+    } catch {
+      // Backend batch upload failed; generating client-side fallback data URLs
       // Read all files as Data URLs in parallel
       const dataUrlPromises = filesToUpload.map((file) => {
         return new Promise((resolve) => {

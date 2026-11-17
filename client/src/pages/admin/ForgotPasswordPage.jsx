@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { useMutation } from '@tanstack/react-query';
 import { forgotPassword } from '../../api/services';
 import SEOHead from '../../components/shared/SEOHead.jsx';
-import ThemeToggle from '../../components/shared/ThemeToggle.jsx';
 
 export default function ForgotPasswordPage() {
   const [email, setEmail] = useState('');
@@ -25,18 +24,14 @@ export default function ForgotPasswordPage() {
   return (
     <>
       <SEOHead title="Forgot Password" noindex />
-      <div className="login-page">
-        <div className="login-top-bar">
-          <ThemeToggle />
-        </div>
-        
-        <div className="login-card glass-card-light">
-          <div className="login-header">
-            <h1 className="login-title">Forgot Password</h1>
-            <p className="login-subtitle">Enter your email to receive a reset link.</p>
+      <div className="admin-login-page">
+        <div className="admin-login-card glass-card-light">
+          <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
+            <h1 style={{ fontSize: '1.5rem' }}>Forgot Password</h1>
+            <p style={{ fontSize: '0.875rem', color: 'var(--color-text-muted)', marginTop: '0.25rem' }}>Enter your email to receive a reset link.</p>
           </div>
 
-          <form onSubmit={handleSubmit} className="login-form">
+          <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             <div className="form-group">
               <label className="form-label" htmlFor="email">Email Address</label>
               <input

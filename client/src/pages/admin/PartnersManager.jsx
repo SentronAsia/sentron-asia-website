@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import api from '../../api/axios';
 import Marquee from '../../components/shared/Marquee.jsx';
 import { uploadToCloudinary } from '../../api/services';
@@ -18,21 +18,21 @@ export default function PartnersManager() {
   const fileInputRef = useRef(null);
 
   // Fetch Data
-  const fetchPartners = async () => {
+  const fetchPartners = useCallback(async () => {
     setIsLoading(true);
     try {
       const res = await api.get('/admin/partners');
       setPartners(res.data?.data || []);
-    } catch (err) {
-      console.error('Failed to fetch partners:', err);
+    } catch {
+      // Fetch failed silently — loading state will clear
     } finally {
       setIsLoading(false);
     }
-  };
+  }, []);
 
   useEffect(() => {
     fetchPartners();
-  }, []);
+  }, [fetchPartners]);
 
   const allMarqueeLogos = partners.flatMap((p) => {
     const list = p.logos && p.logos.length > 0 ? p.logos : (p.logo ? [p.logo] : []);
@@ -65,8 +65,7 @@ export default function PartnersManager() {
     try {
       await api.delete(`/admin/partners/${id}`);
       fetchPartners();
-    } catch (err) {
-      console.error('Delete failed:', err);
+    } catch {
       alert('Failed to delete partner.');
     }
   };
@@ -99,9 +98,8 @@ export default function PartnersManager() {
 
       closeModal();
       fetchPartners();
-    } catch (err) {
-      console.error('Save failed:', err);
-      alert('Failed to save partner. Please check console for details.');
+    } catch {
+      alert('Failed to save partner.');
     } finally {
       setIsSubmitting(false);
     }

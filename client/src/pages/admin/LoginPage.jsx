@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext.jsx';
 import SEOHead from '../../components/shared/SEOHead.jsx';
 
@@ -82,6 +82,11 @@ export default function LoginPage() {
             <button type="submit" className="btn btn-primary" disabled={loading} id="login-submit">
               {loading ? 'Signing in...' : 'Sign In'}
             </button>
+            <div style={{ textAlign: 'center', marginTop: '0.5rem' }}>
+              <Link to="/admin/forgot-password" style={{ color: 'var(--color-text-muted)', fontSize: '0.8125rem', textDecoration: 'none' }}>
+                Forgot Password?
+              </Link>
+            </div>
           </form>
         </div>
       </div>

@@ -3,7 +3,7 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useMutation } from '@tanstack/react-query';
 import { resetPassword } from '../../api/services';
 import SEOHead from '../../components/shared/SEOHead.jsx';
-import ThemeToggle from '../../components/shared/ThemeToggle.jsx';
+import { notify } from '../../components/shared/toastService.js';
 
 export default function ResetPasswordPage() {
   const { token } = useParams();
@@ -15,7 +15,7 @@ export default function ResetPasswordPage() {
   const mutation = useMutation({
     mutationFn: resetPassword,
     onSuccess: () => {
-      alert('Password reset successfully. Please login.');
+      notify('Password reset successfully. Please login.', 'success');
       navigate('/admin/login');
     },
   });
@@ -40,18 +40,14 @@ export default function ResetPasswordPage() {
   return (
     <>
       <SEOHead title="Reset Password" noindex />
-      <div className="login-page">
-        <div className="login-top-bar">
-          <ThemeToggle />
-        </div>
-        
-        <div className="login-card glass-card-light">
-          <div className="login-header">
-            <h1 className="login-title">Reset Password</h1>
-            <p className="login-subtitle">Enter your new password below.</p>
+      <div className="admin-login-page">
+        <div className="admin-login-card glass-card-light">
+          <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
+            <h1 style={{ fontSize: '1.5rem' }}>Reset Password</h1>
+            <p style={{ fontSize: '0.875rem', color: 'var(--color-text-muted)', marginTop: '0.25rem' }}>Enter your new password below.</p>
           </div>
 
-          <form onSubmit={handleSubmit} className="login-form">
+          <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             <div className="form-group">
               <label className="form-label" htmlFor="password">New Password</label>
               <input
